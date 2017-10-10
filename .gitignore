@@ -17,4 +17,5 @@ Homestead.yaml
 Homestead.json
 
 # Rocketeer PHP task runner and deployment package. https://github.com/rocketeers/rocketeer
-.rocketeer/
+.rocketeer/o
+nbproject/

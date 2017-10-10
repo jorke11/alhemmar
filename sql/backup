@@ -1,0 +1,1 @@
+/usr/lib/postgresql/9.4/bin/pg_dump -i -h localhost -p 5432 -U postgres -F c -b -v -f /var/www/html/alhemmar/sql/alhemmar.backup alhemmar
