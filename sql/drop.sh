@@ -1,2 +1,2 @@
-psql andiseg< ./drop.sql;
+psql alhemmar< ./drop.sql;
 

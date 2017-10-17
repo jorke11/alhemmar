@@ -72,7 +72,7 @@ echo json_encode([
     <!--<body style="background-color: #ef8002;">-->
     <body>
         <div id="app" >
-            <nav class="navbar navbar-default navbar-static-top">
+            <nav class="navbar navbar-default navbar-fixed-top">
                 <div class="container">
                     <div class="navbar-header">
 

@@ -1,3 +1,3 @@
-psql andiseg< ./views.sql;
-psql andiseg < ./trigger.sql;
+psql alhemmar< ./views.sql;
+psql alhemmar < ./trigger.sql;
 
