@@ -72,7 +72,7 @@ echo json_encode([
     <!--<body style="background-color: #ef8002;">-->
     <body>
         <div id="app" >
-            <nav class="navbar navbar-default navbar-fixed-top">
+            <nav class="navbar navbar-default navbar-fixed-top" style="background-color:rgba(0,0,0,.5)">
                 <div class="container">
                     <div class="navbar-header">
 
@@ -93,10 +93,10 @@ echo json_encode([
                     <div class="collapse navbar-collapse" id="app-navbar-collapse">
                         <!-- Left Side Of Navbar -->
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="#">Inicio</a></li>
-                            <li><a href="#who">Quines Somos</a></li>
+                            <li class="active"><a href="#" >Inicio</a></li>
+                            <li><a href="#who" >Quiénes Somos</a></li>
                             <li><a href="#service">Servicio</a></li>
-                            <li><a href="#contact">Contactenos</a></li>
+                            <li><a href="#contact">Contáctenos</a></li>
                         </ul>
 
                     </div>
