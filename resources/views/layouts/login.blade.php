@@ -71,9 +71,8 @@ echo json_encode([
     </head>
     <body>
         <div id="app">
-            <div class="container-fluid">
-                @yield('content')
-            </div>
+            @yield('content')
+
         </div>
         <!-- Scripts -->
         <!--<script src="/js/app.js"></script>-->
