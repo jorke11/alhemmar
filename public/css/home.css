@@ -1,26 +1,26 @@
 .navbar-default {
     background-color: #777779;
-
-
     background: #e9eaee;
 
 }
 
-
-
 .navbar-default .navbar-brand{
-    color: white;
+    color: rgba(0,107,159,.9);
     font-weight: 600;
 }
 
 .navbar-default .navbar-nav>li>a{
-    color: #fff;
+    color: rgba(0,107,159,.9);
     /*font-weight: bold;*/
 }
 
 .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
-    color: #fff;
+    color: rgba(0,107,159,.9);
     font-weight: bold;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+    background-color: #f5f5f5;
 }
 
 .panel-default>.panel-heading{

@@ -72,7 +72,7 @@ echo json_encode([
     <!--<body style="background-color: #ef8002;">-->
     <body>
         <div id="app" >
-            <nav class="navbar navbar-default navbar-fixed-top" style="background-color:rgba(0,0,0,.5)">
+            <nav class="navbar navbar-default navbar-fixed-top" style="background-color:rgba(255,255,255,.5)">
                 <div class="container">
                     <div class="navbar-header">
 
@@ -85,9 +85,9 @@ echo json_encode([
                         </button>
 
                         <!-- Branding Image -->
-                        <!--                        <a class="navbar-brand" href="{{ url('/') }}">
-                                                    <img src="{!!asset('img/Logo40x24.png')!!}" class="img-login">
-                                                </a>-->
+                        <a class="navbar-brand" href="{{ url('/') }}" style="padding-top: 9%">
+                            <img src="{!!asset('img/logo70x32.png')!!}" class="img-login">
+                        </a>
                     </div>
 
                     <div class="collapse navbar-collapse" id="app-navbar-collapse">
@@ -96,7 +96,10 @@ echo json_encode([
                             <li class="active"><a href="#" >Inicio</a></li>
                             <li><a href="#who" >Quiénes Somos</a></li>
                             <li><a href="#service">Servicio</a></li>
+                            <li><a href="#cobertura">Cobertura</a></li>
+                            <li><a href="#service">Blogs y experiencias</a></li>
                             <li><a href="#contact">Contáctenos</a></li>
+                            <li><a href="/">Plataforma Tecnologica</a></li>
                         </ul>
 
                     </div>
