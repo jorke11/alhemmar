@@ -123,8 +123,10 @@
                     <h3 class="panel-title text-center">Misión</h3>
                 </div>
                 <div class="panel-body">
+                    <p class="text-justify">
                     Ofrecer un excelente servicio de seguridad y consultoría a nuestros clientes, utilizando las mejores herramientas tecnológicas, 
                     controladas por nuestro equipo experto de colaboradores.
+                    </p>
                 </div>
             </div>
         </div>
@@ -134,8 +136,10 @@
                     <h3 class="panel-title text-center">Visión</h3>
                 </div>
                 <div class="panel-body">
+                    <p class="text-justify">
                     Alhemmar Security será el mejor aliado estratégico en servicios de seguridad y consultoría, e  inspirando lo más 
                     confiable en la vida cotidiana de sus clientes.
+                    </p>
                 </div>
             </div>
         </div>

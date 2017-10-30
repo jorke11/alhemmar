@@ -12,9 +12,11 @@
  */
 
 Auth::routes();
-Route::get('/', 'HomeController@index');
+Route::get('/', 'PageController@index');
 Route::get('/home', 'HomeController@index');
-Route::get('/page', 'PageController@index');
+Route::get('/system', 'HomeController@index');
+Route::get('/blog', 'BlogController@index');
+
 Route::resource('/courses', 'Administration\CoursesController');
 Route::resource('/parameters', 'Administration\ParametersController');
 Route::resource('/schedules', 'Administration\SchedulesController');
