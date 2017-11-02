@@ -83,6 +83,25 @@
         padding-bottom:  10% !important;
         border-radius: 15px;
     }
+    
+    .div-soldier{
+        background-color: rgba(60,74,75,1) !important;
+        padding-top: 14% !important;
+        padding-bottom:  10% !important;
+        border-radius: 15px;
+    }
+    .menu-black{
+        background-color:rgba(0,0,0,.8) !important;
+
+    }
+    .menu-black-word{
+        color:white !important;
+        font-weight: bold !important;
+    }
+    .menu-black-active{
+        color:black !important;
+        background-color:white !important;
+    }
 </style>
 <div id="space-nav">
 
@@ -124,8 +143,8 @@
                 </div>
                 <div class="panel-body">
                     <p class="text-justify">
-                    Ofrecer un excelente servicio de seguridad y consultoría a nuestros clientes, utilizando las mejores herramientas tecnológicas, 
-                    controladas por nuestro equipo experto de colaboradores.
+                        Ofrecer un excelente servicio de seguridad y consultoría a nuestros clientes, utilizando las mejores herramientas tecnológicas, 
+                        controladas por nuestro equipo experto de colaboradores.
                     </p>
                 </div>
             </div>
@@ -137,8 +156,8 @@
                 </div>
                 <div class="panel-body">
                     <p class="text-justify">
-                    Alhemmar Security será el mejor aliado estratégico en servicios de seguridad y consultoría, e  inspirando lo más 
-                    confiable en la vida cotidiana de sus clientes.
+                        Alhemmar Security será el mejor aliado estratégico en servicios de seguridad y consultoría, e  inspirando lo más 
+                        confiable en la vida cotidiana de sus clientes.
                     </p>
                 </div>
             </div>
@@ -176,7 +195,7 @@
                         <div class="item active">
                             <div class="row" style="padding-left: 5%">
                                 <div class="col-lg-3">
-                                    <div class="panel panel-default div-blue">
+                                    <div class="panel panel-default div-soldier">
                                         <div class="panel-body">
                                             <p class="text-center text-services" >SEGURIDAD INTEGRAL 
                                                 <br>
@@ -186,7 +205,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-3">
-                                    <div class="panel panel-default div-pink">
+                                    <div class="panel panel-default div-soldier">
                                         <div class="panel-body ">
                                             <p class="text-center text-services">EXAMENES <br>DE POLIGRAFIA</p>
 
@@ -194,7 +213,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-3">
-                                    <div class="panel panel-default div-green">
+                                    <div class="panel panel-default div-soldier">
                                         <div class="panel-body">
                                             <p class="text-center text-services">
                                                 PRUEBAS DE <br>EYE DETECT
@@ -204,7 +223,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-3">
-                                    <div class="panel panel-default div-brown">
+                                    <div class="panel panel-default div-soldier">
                                         <div class="panel-body">
                                             <p class="text-center text-services">PRUEBAS DE V.S.A ANALISIS <br>DE STRES DE LA VOZ</p>
 
@@ -214,28 +233,28 @@
                             </div>
                             <div class="row" style="padding-left: 5%;padding-bottom: 7%">
                                 <div class="col-lg-3">
-                                    <div class="panel panel-default  div-purple">
+                                    <div class="panel panel-default  div-soldier">
                                         <div class="panel-body text-center">
                                             <p class="text-center text-services">ESTUDIOS DE CONFIABILIDAD<br> A PERSONAS</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-3">
-                                    <div class="panel panel-default div-skyblue">
+                                    <div class="panel panel-default div-soldier">
                                         <div class="panel-body">
                                             <p class="text-center text-services">PRUEBAS <br>PSICOTECNICAS</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-3">
-                                    <div class="panel panel-default div-darkblue">
+                                    <div class="panel panel-default div-soldier">
                                         <div class="panel-body">
                                             <p class="text-center text-services">SELECCIÓN DE <br>PERSONAL ADMINISTRATIVO</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-3">
-                                    <div class="panel panel-default div-skyblue">
+                                    <div class="panel panel-default div-soldier">
                                         <div class="panel-body">
                                             <p class="text-center text-services">SELECCIÓN DE PERSONAL PARA SERVICIOS DE NIÑERAS</p>
                                         </div>
@@ -249,7 +268,7 @@
                         <div class="item">
                             <div class="row" style="padding-left: 5%">
                                 <div class="col-lg-3">
-                                    <div class="panel panel-default div-blue">
+                                    <div class="panel panel-default div-soldier">
                                         <div class="panel-body">
                                             <p class="text-center text-services" >SELECCIÓN DE PERSONAL PARA SERVICIOS DOMESTICOS
                                             </p>
@@ -257,7 +276,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-3">
-                                    <div class="panel panel-default div-pink">
+                                    <div class="panel panel-default div-soldier">
                                         <div class="panel-body ">
                                             <p class="text-center text-services">VISITAS DOMICILIARIAS A PROVEEDORES</p>
 
@@ -265,7 +284,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-3">
-                                    <div class="panel panel-default div-green">
+                                    <div class="panel panel-default div-soldier">
                                         <div class="panel-body">
                                             <p class="text-center text-services">
                                                 VALIDACIONES DE <br>IDENTIDAD
@@ -275,7 +294,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-3">
-                                    <div class="panel panel-default div-brown">
+                                    <div class="panel panel-default div-soldier">
                                         <div class="panel-body">
                                             <p class="text-center text-services">VERIFICACIONES JUDICIALES</p>
 
@@ -285,7 +304,7 @@
                             </div>
                             <div class="row" style="padding-left: 5%;padding-bottom: 7%">
                                 <div class="col-lg-3">
-                                    <div class="panel panel-default  div-purple">
+                                    <div class="panel panel-default  div-soldier">
                                         <div class="panel-body text-center">
                                             <p class="text-center text-services">
                                                 VERIFICACIONES ACADEMICAS
@@ -294,7 +313,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-3">
-                                    <div class="panel panel-default div-skyblue">
+                                    <div class="panel panel-default div-soldier">
                                         <div class="panel-body">
                                             <p class="text-center text-services">
                                                 VERIFICACIONES <br>FINANCIERAS
@@ -303,7 +322,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-3">
-                                    <div class="panel panel-default div-darkblue">
+                                    <div class="panel panel-default div-soldier">
                                         <div class="panel-body">
                                             <p class="text-center text-services">
                                                 ANALISIS Y GESTION DE RIESGOS DE DIFERENTES ENTORNOS
@@ -312,7 +331,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-3">
-                                    <div class="panel panel-default div-skyblue">
+                                    <div class="panel panel-default div-soldier">
                                         <div class="panel-body">
                                             <p class="text-center text-services">
                                                 ESTUDIOS DE SEGURIDAD A INSTALACIONES
@@ -329,16 +348,16 @@
                         <div class="item">
                             <div class="row" style="padding-left: 5%">
                                 <div class="col-lg-3">
-                                    <div class="panel panel-default div-blue">
+                                    <div class="panel panel-default div-soldier">
                                         <div class="panel-body">
                                             <p class="text-center text-services" >
-                                                AUDITORIAS A CONTRATOS
+                                                AUDITORIAS A <br>CONTRATOS
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-3">
-                                    <div class="panel panel-default div-pink">
+                                    <div class="panel panel-default div-soldier">
                                         <div class="panel-body ">
                                             <p class="text-center text-services">
                                                 CAPACITACIONES EN SEGURIDAD
@@ -348,7 +367,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-3">
-                                    <div class="panel panel-default div-green">
+                                    <div class="panel panel-default div-soldier">
                                         <div class="panel-body">
                                             <p class="text-center text-services">
                                                 INVESTIGACIONES ADMINISTRATIVAS
@@ -358,7 +377,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-3">
-                                    <div class="panel panel-default div-brown">
+                                    <div class="panel panel-default div-soldier">
                                         <div class="panel-body">
                                             <p class="text-center text-services">
                                                 EVALUACION DE SINIESTROS
@@ -370,7 +389,7 @@
                             </div>
                             <div class="row" style="padding-left: 5%;padding-bottom: 7%">
                                 <div class="col-lg-3">
-                                    <div class="panel panel-default  div-purple">
+                                    <div class="panel panel-default  div-soldier">
                                         <div class="panel-body text-center">
                                             <p class="text-center text-services">
                                                 ASESORIA JURIDICA LABORAL Y PENAL
@@ -379,7 +398,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-3">
-                                    <div class="panel panel-default div-skyblue">
+                                    <div class="panel panel-default div-soldier">
                                         <div class="panel-body">
                                             <p class="text-center text-services">
                                                 SEGURIDAD INFORMATICA
@@ -388,7 +407,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-3">
-                                    <div class="panel panel-default div-darkblue">
+                                    <div class="panel panel-default div-soldier">
                                         <div class="panel-body">
                                             <p class="text-center text-services">
                                                 SISTEMAS TECNOLOGICOS EN SEGURIDAD
@@ -512,5 +531,5 @@
     </div>
 </footer>
 
-
+{!!Html::script('js/Page/page.js')!!}
 @endsection
