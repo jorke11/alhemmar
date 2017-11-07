@@ -92,7 +92,7 @@
                     <div class="col-lg-12">
                         <div class="form-group">
                             <label for="email">Concepto</label>
-                            <select class="form-control input-academic input-sm" id="concept_id" name="concept_id" required="">
+                            <select class="form-control input-sm" id="concept_id" name="concept_id" required="">
                                 <option value="0">Seleccione</option>
                                 @foreach($results as $val)
                                 <option value="{{$val->code}}">{{$val->description}}</option>

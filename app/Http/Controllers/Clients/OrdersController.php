@@ -41,6 +41,8 @@ class OrdersController extends Controller {
                             ->join("courses", "courses.id", "schedules_detail.course_id")->get();
         }
 
+
+
         return view("Clients.Orders.init", compact("esquemas", "type_document", "department", "cities", "users"));
     }
 
@@ -89,6 +91,7 @@ class OrdersController extends Controller {
                 $send = Email::where("description", "orders")->first();
 
                 $client = Client::find(Auth::User()->client_id);
+//                dd($client);
                 $executive = Users::find($client->executive_id);
 
                 $this->email[] = $executive->email;

@@ -58,9 +58,20 @@ class TraicingController extends Controller {
         $photo = Parameters::where("group", "photo")->get();
         $eps = Parameters::where("group", "eps_id")->get();
         $pensiones = Parameters::where("group", "pension_id")->get();
+        $features_home = Parameters::where("group", "features_home")->get();
+        $status_home = Parameters::where("group", "status_house")->get();
+        $service = Parameters::where("group", "service")->get();
+        $inventory = Parameters::where("group", "inventory")->get();
+        $property = Parameters::where("group", "property")->get();
+        $property_type = Parameters::where("group", "property_type")->get();
+        $financial_obligation = Parameters::where("group", "financial_obligation")->get();
+        $finantial_entities = Parameters::where("group", "finantial_entities")->get();
+        $investment_type = Parameters::where("group", "investment_type")->get();
+        $cities = Cities::all();
 
         $cities = Cities::all();
-        return view("Clients.Traicing.init", compact("type_document", "cities", "type_study", "questions", "entities", "results", "category", "civil_status", "class_military", "photo", "eps", "pensiones"));
+        return view("Clients.Traicing.init", compact("type_document", "cities", "type_study", "questions", "entities", "results", "category", "civil_status", "class_military", "photo"
+                        , "eps", "pensiones", "features_home", "status_home", "service", "inventory", "property", "property_type", "financial_obligation", "finantial_entities", "investment_type", "cities"));
     }
 
     public function create() {
@@ -113,6 +124,7 @@ class TraicingController extends Controller {
     }
 
     public function preview($id) {
+        
         $sql = "
                 select o.id,o.name,o.last_name,o.document,bir.description city_birthday,exp.description city_expedition,o.client,o.position,
                 0.type_document,b.passport,b.militar_card,cla.description class_militar,b.district,b.age,civ.description civil_status,
@@ -131,17 +143,20 @@ class TraicingController extends Controller {
                 WHERE o.id=" . $id;
         $biog = DB::select($sql);
         $biog = (array) $biog[0];
-
+        
+//        dd($biog);
         $sql = "
             select d.id,es.description type_study,d.obtained_title,d.institution,res.description concept
             from academic_detail d
             JOIN academic a ON a.id=d.academic_id
             JOIN parameters es ON es.code=d.study_id and es.group='type_study'
             JOIN parameters res ON res.code=d.concept_id and res.group='results'
-            WHERE a.order_id=" . $id;
+            WHERE a.order_id=" . $id." ORDER by id desc";
         $aca = DB::select($sql);
         $aca = (array) $aca;
-        $biog["academic"] = $aca;
+        $biog["academic"] = $aca[0];
+        
+//        dd($biog["academic"]);
         $sql = "
             select d.id,d.description,CASE WHEN si_no=true THEN 'SI' ELSE 'NO' END si_no,q.description question
             from juridic_detail d   
@@ -173,7 +188,7 @@ class TraicingController extends Controller {
         $biog["laboral"] = $laboral;
 
         $sql = "
-            select d.img,f.description typephoto
+            select d.img,f.description typephoto,d.thumbnail
             from photo_detail  d
             JOIN photo p ON p.id=d.photo_id
             JOIN parameters as f ON f.code=d.typephoto_id and f.group='photo'
@@ -181,7 +196,7 @@ class TraicingController extends Controller {
         $photo = DB::select($sql);
         $photo = (array) $photo;
         $biog["photo"] = $photo;
-//        dd($laboral);
+        
         $pdf = \PDF::loadView('Clients.Traicing.pdf', [], $biog, ['title' => 'Estudio seguridad']);
 //        $pdf->SetProtection(array(), $id, '12345');
         header('Content-Type: application/pdf');

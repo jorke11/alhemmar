@@ -6,7 +6,7 @@
                     <div class="row">
                         <div class="col-lg-3">Petición</div>
                         <div class="col-lg-9 text-right">
-                            <button class="btn btn-success btn-sm" type="button" id="btnNew">
+                            <button class="btn btn-primary btn-sm" type="button" id="btnNew">
                                 <span class="glyphicon glyphicon-plus" aria-hidden="true"> Nuevo</span>
                             </button>
                             <button class="btn btn-success btn-sm" type="button" id="btnSave">

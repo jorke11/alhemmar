@@ -109,6 +109,7 @@ Route::get('/api/listCity', function() {
 Route::get('/api/listClients', function() {
     $query = DB::table("vclient");
     if (Auth::user()->role_id != 1) {
+        
         $query->where("executive_id", Auth::user()->id);
     }
     return Datatables::queryBuilder($query)->make(true);
