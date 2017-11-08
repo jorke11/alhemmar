@@ -83,7 +83,7 @@
         padding-bottom:  10% !important;
         border-radius: 15px;
     }
-    
+
     .div-soldier{
         background-color: rgba(60,74,75,1) !important;
         padding-top: 14% !important;
@@ -91,9 +91,18 @@
         border-radius: 15px;
     }
     .menu-black{
-        background-color:rgba(0,0,0,.8) !important;
+        background-color:rgba(0,0,0,1) !important;
 
     }
+    .menu-white{
+        background-color:rgba(255,255,255,.9) !important;
+    }
+
+    .menu-white-word{
+        color: #0066cc;
+                display: inline;
+    }
+
     .menu-black-word{
         color:white !important;
         font-weight: bold !important;
@@ -531,5 +540,5 @@
     </div>
 </footer>
 
-{!!Html::script('js/Page/page.js')!!}
+
 @endsection

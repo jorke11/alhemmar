@@ -59,6 +59,7 @@
         {!!Html::script('/vendor/select2/js/select2.js')!!}
         {!!Html::style('/css/edited.css')!!}
         {!!Html::style('/css/home.css')!!}
+        
         <!-- Scripts -->
         <script>
             window.Laravel = <?php
@@ -67,12 +68,15 @@ echo json_encode([
 ]);
 ?>
         </script>
+        <style>
+            
+        </style>
         <!--<link href="/css/app.css" rel="stylesheet">-->
     </head>
     <!--<body style="background-color: #ef8002;">-->
     <body>
         <div id="app" >
-            <nav class="navbar navbar-default navbar-fixed-top" style="background-color:rgba(255,255,255,.5)">
+            <nav class="navbar navbar-default navbar-fixed-top menu-white">
                 <div class="container">
                     <div class="navbar-header">
 
@@ -86,7 +90,7 @@ echo json_encode([
 
                         <!-- Branding Image -->
                         <a class="navbar-brand" href="{{ url('/') }}" style="padding-top: 9%">
-                            <img src="{!!asset('img/logo70x32.png')!!}" class="img-login">
+                            <img id="logo-menu" class="img-responsive">
                         </a>
                     </div>
 
@@ -110,6 +114,7 @@ echo json_encode([
 
         <!-- Scripts -->
         <!--<script src="/js/app.js"></script>-->
+        {!!Html::script('js/Page/page.js')!!}
         {!!Html::script('/vendor/plugins.js')!!}
     </body>
 </html>
