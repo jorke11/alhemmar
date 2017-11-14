@@ -90,7 +90,7 @@ echo json_encode([
 
                         <!-- Branding Image -->
                         <a class="navbar-brand" href="{{ url('/') }}" style="padding-top: 9%">
-                            <img id="logo-menu" class="img-responsive">
+                            <img id="logo-menu" class="img-responsive" >
                         </a>
                     </div>
 

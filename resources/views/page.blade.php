@@ -125,12 +125,12 @@
 </div>
 <div class="container" id="who" style="padding-top: 7%;padding-bottom: 7%">
     <div class="row" style="padding-bottom: 4%">
-        <div class="col-lg-4" style="padding-top: 2%;padding-left: 0;padding-right: 0"><hr style="border:2px solid #ccc"></div>
-        <div class="col-lg-4"><h1 class="text-center" style="color:rgba(138,1,1,1)">Quiénes Somos</h1></div>
-        <div class="col-lg-4" style="padding-top: 2%;padding-left: 0;padding-right: 0"><hr style="border:2px solid #ccc"></div>
+        <div class="col-lg-4 col-md-4 col-sm-4" style="padding-top: 2%;padding-left: 0;padding-right: 0"><hr style="border:2px solid #ccc"></div>
+        <div class="col-lg-4 col-md-4 col-sm-4"><h1 class="text-center" style="color:rgba(138,1,1,1)">Quiénes Somos</h1></div>
+        <div class="col-lg-4 col-md-4 col-sm-4" style="padding-top: 2%;padding-left: 0;padding-right: 0"><hr style="border:2px solid #ccc"></div>
     </div>
     <div class="row" style="padding-bottom: 4%">
-        <div class="col-lg-6 col-lg-offset-3">
+        <div class="col-lg-6 col-lg-offset-3 col-md-6 col-sm-6">
             <div class="panel panel-default">
                 <div class="panel-body">
                     <p class="text-center" style="color:#6d6d66">
@@ -145,7 +145,7 @@
     </div>
     <div class="row">
 
-        <div class="col-lg-4 col-lg-offset-2">
+        <div class="col-lg-4 col-lg-offset-2 col-md-4 col-md-offset-2 col-sm-4 col-xs-5 col-xs-offset-1">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title text-center">Misión</h3>
@@ -158,7 +158,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-5">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title text-center">Visión</h3>
@@ -203,7 +203,7 @@
                     <div class="carousel-inner">
                         <div class="item active">
                             <div class="row" style="padding-left: 5%">
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
                                     <div class="panel panel-default div-soldier">
                                         <div class="panel-body">
                                             <p class="text-center text-services" >SEGURIDAD INTEGRAL 
@@ -213,7 +213,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
                                     <div class="panel panel-default div-soldier">
                                         <div class="panel-body ">
                                             <p class="text-center text-services">EXAMENES <br>DE POLIGRAFIA</p>
@@ -221,7 +221,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
                                     <div class="panel panel-default div-soldier">
                                         <div class="panel-body">
                                             <p class="text-center text-services">
@@ -231,7 +231,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
                                     <div class="panel panel-default div-soldier">
                                         <div class="panel-body">
                                             <p class="text-center text-services">PRUEBAS DE V.S.A ANALISIS <br>DE STRES DE LA VOZ</p>
@@ -241,28 +241,28 @@
                                 </div>
                             </div>
                             <div class="row" style="padding-left: 5%;padding-bottom: 7%">
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
                                     <div class="panel panel-default  div-soldier">
                                         <div class="panel-body text-center">
                                             <p class="text-center text-services">ESTUDIOS DE CONFIABILIDAD<br> A PERSONAS</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
                                     <div class="panel panel-default div-soldier">
                                         <div class="panel-body">
                                             <p class="text-center text-services">PRUEBAS <br>PSICOTECNICAS</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
                                     <div class="panel panel-default div-soldier">
                                         <div class="panel-body">
                                             <p class="text-center text-services">SELECCIÓN DE <br>PERSONAL ADMINISTRATIVO</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
                                     <div class="panel panel-default div-soldier">
                                         <div class="panel-body">
                                             <p class="text-center text-services">SELECCIÓN DE PERSONAL PARA SERVICIOS DE NIÑERAS</p>
@@ -276,7 +276,7 @@
 
                         <div class="item">
                             <div class="row" style="padding-left: 5%">
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
                                     <div class="panel panel-default div-soldier">
                                         <div class="panel-body">
                                             <p class="text-center text-services" >SELECCIÓN DE PERSONAL PARA SERVICIOS DOMESTICOS
@@ -284,7 +284,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
                                     <div class="panel panel-default div-soldier">
                                         <div class="panel-body ">
                                             <p class="text-center text-services">VISITAS DOMICILIARIAS A PROVEEDORES</p>
@@ -292,7 +292,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
                                     <div class="panel panel-default div-soldier">
                                         <div class="panel-body">
                                             <p class="text-center text-services">
@@ -302,7 +302,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
                                     <div class="panel panel-default div-soldier">
                                         <div class="panel-body">
                                             <p class="text-center text-services">VERIFICACIONES JUDICIALES</p>
@@ -312,7 +312,7 @@
                                 </div>
                             </div>
                             <div class="row" style="padding-left: 5%;padding-bottom: 7%">
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
                                     <div class="panel panel-default  div-soldier">
                                         <div class="panel-body text-center">
                                             <p class="text-center text-services">
@@ -321,7 +321,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
                                     <div class="panel panel-default div-soldier">
                                         <div class="panel-body">
                                             <p class="text-center text-services">
@@ -330,7 +330,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
                                     <div class="panel panel-default div-soldier">
                                         <div class="panel-body">
                                             <p class="text-center text-services">
@@ -339,7 +339,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
                                     <div class="panel panel-default div-soldier">
                                         <div class="panel-body">
                                             <p class="text-center text-services">
@@ -356,7 +356,7 @@
 
                         <div class="item">
                             <div class="row" style="padding-left: 5%">
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
                                     <div class="panel panel-default div-soldier">
                                         <div class="panel-body">
                                             <p class="text-center text-services" >
@@ -365,7 +365,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
                                     <div class="panel panel-default div-soldier">
                                         <div class="panel-body ">
                                             <p class="text-center text-services">
@@ -375,7 +375,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
                                     <div class="panel panel-default div-soldier">
                                         <div class="panel-body">
                                             <p class="text-center text-services">
@@ -385,7 +385,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
                                     <div class="panel panel-default div-soldier">
                                         <div class="panel-body">
                                             <p class="text-center text-services">
@@ -397,7 +397,7 @@
                                 </div>
                             </div>
                             <div class="row" style="padding-left: 5%;padding-bottom: 7%">
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
                                     <div class="panel panel-default  div-soldier">
                                         <div class="panel-body text-center">
                                             <p class="text-center text-services">
@@ -406,7 +406,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
                                     <div class="panel panel-default div-soldier">
                                         <div class="panel-body">
                                             <p class="text-center text-services">
@@ -415,7 +415,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
                                     <div class="panel panel-default div-soldier">
                                         <div class="panel-body">
                                             <p class="text-center text-services">
@@ -449,14 +449,14 @@
 <section id="cobertura">
     <div class="container" style="padding-bottom: 5%">
         <div class="row" style="padding-top:8%;padding-bottom: 1%">
-            <div class="col-lg-6 col-lg-offset-3"><h1 class="text-center">Cobertura</h1></div>
+            <div class="col-lg-6 col-lg-offset-3 col-md-6 col-sm-6 col-xs-6"><h1 class="text-center">Cobertura</h1></div>
         </div>
         <div class="row">
-            <div class="col-lg-6" style="padding-top: 5%">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding-top: 5%">
                 <p class="text-justify">Tenemos cobertura a nivel nacional en el territorio colombiano y municipios principales generando un valor agregado para dar respuesta oportuna a las necesidades generadas por nuestros clientes.<br>
                     Contamos con alianzas estratégicas internacionales en México, Panamá y EEUU, que nos permite desarrollar eficazmente el requerimiento.</p>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 <p class="text-center"> <img src="img/colombia.png"></p>
             </div>
         </div>
@@ -468,7 +468,7 @@
 <footer class="footer" style="background-color: rgba(40,44,47,1);padding-top: 30px;padding-bottom: 20px">
     <div class="container">
         <div class="row" style="padding-bottom: 3%">
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 <div class="row">
                     <div class="col-lg-12" style="color:white;">
                         <p style="color:white;font-size: 18px;">
@@ -479,7 +479,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12" style="color:white;">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="color:white;">
                         <p>
                             <span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span>
                             Casa Matriz, Bogotá Colombia
@@ -487,7 +487,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12" style="color:white;">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="color:white;">
                         <p>
                             <span class="glyphicon glyphicon-road" aria-hidden="true"></span>
 
@@ -496,7 +496,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12" style="color:white;">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="color:white;">
                         <p>
                             <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
                             Conmutador 3229962
@@ -504,7 +504,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12" style="color:white;">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="color:white;">
                         <p>
                             <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
                             3229490505
@@ -512,22 +512,22 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <p style="color:white;font-size: 18px;">Redes Sociales</p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="row">
-                            <div class="col-lg-3 col-lg-offset-3">
+                            <div class="col-lg-3 col-lg-offset-3 col-md-3 col-sm-3 col-xs-4">
                                 <a href="https://es-la.facebook.com/ALSECUR/" target="_blank"><img src='img/facebook.png'></a>
                             </div>
-                            <div class="col-lg-3">
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4">
                                 <img src='img/instagram.png'>
                             </div>
-                            <div class="col-lg-3">
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4">
                                 <img src='img/twitter.png'>
                             </div>
                         </div>

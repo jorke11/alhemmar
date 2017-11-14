@@ -63,7 +63,7 @@ CREATE TRIGGER biografic BEFORE UPDATE ON juridic
 
 --actualizar estado de la order
 
-CREATE OR REPLACE FUNCTION juridic() RETURNS trigger AS $anotations$
+CREATE OR REPLACE FUNCTION anotations() RETURNS trigger AS $anotations$
 	BEGIN
 		UPDATE orders set status_id=2 , event_id=6 , updated_at=now() where id=NEW.order_id;
 	return NEW;
