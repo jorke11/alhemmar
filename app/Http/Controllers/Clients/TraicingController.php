@@ -87,6 +87,17 @@ class TraicingController extends Controller {
 
         $this->order = DB::table("vorders")->where("id", $in["id"])->first();
 
+        $sql = "
+            select d.id,es.description type_study,d.obtained_title,d.institution,res.description concept
+            from academic_detail d
+            JOIN academic a ON a.id=d.academic_id
+            JOIN parameters es ON es.code=d.study_id and es.group='type_study'
+            JOIN parameters res ON res.code=d.concept_id and res.group='results'
+            WHERE a.order_id=" . $id . " ORDER by id desc";
+        $aca = DB::select($sql);
+        $aca = (array) $aca;
+        $this->order["academic"] = $aca[0];
+
         $pdf = \PDF::loadView('Clients.Traicing.pdf', [], (array) $this->order, ['title' => 'Invoice']);
         $pdf->SetProtection(array(), "andiseg", '12345');
         header('Content-Type: application/pdf');
@@ -141,7 +152,7 @@ class TraicingController extends Controller {
                 LEFT JOIN parameters pen ON pen.code=b.pensiones_id and pen.group='pension_id'
                 JOIN parameters eps ON eps.code=b.eps_id and eps.group='eps_id'
                 WHERE o.id=" . $id;
-        
+
         $biog = DB::select($sql);
         $biog = (array) $biog[0];
 

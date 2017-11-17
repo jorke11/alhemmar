@@ -28,7 +28,7 @@
                             <td>Adjunto estudio completo de </td>
                         </tr>
                         <tr>
-                            <td align='center' colspan="2" class="title">ANDISEG SYSTEM</td>
+                            <td align='center' colspan="2" class="title">Alhemmar System</td>
                         </tr>
                     </table>
                 </td>

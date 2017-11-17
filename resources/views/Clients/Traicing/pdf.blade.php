@@ -53,7 +53,7 @@
                         </tr>
                         <tr>
                             <td>Fecha y lugar de nacimiento</td>
-                            <td><b>{{$city_birthday}}</b></td>
+                            <td><b>{{(isset($city_birthday))?$city_birthday:''}}</b></td>
                         </tr>
                         <tr>
                             <td>Nivel educativo</td>
