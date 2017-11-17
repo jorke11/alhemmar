@@ -86,19 +86,82 @@ class TraicingController extends Controller {
         $in = $req->all();
 
         $this->order = DB::table("vorders")->where("id", $in["id"])->first();
+        $id = $in["id"];
+        $sql = "
+                select o.id,o.name,o.last_name,o.document,bir.description city_birthday,exp.description city_expedition,o.client,o.position,
+                0.type_document,b.passport,b.militar_card,cla.description class_militar,b.district,b.age,civ.description civil_status,
+                b.profession,b.professional_card,o.address,o.neighborhood,cit.description city,o.phone,b.phone2,b.email,o.mobil,
+                b.driving_licence,cat.description category,pen.description pension,eps.description eps,o.comment,o.img,o.concept_id
+                from vorders o
+                JOIN biografic b ON b.order_id=o.id
+                JOIN cities cit ON cit.id=o.city_id
+                JOIN cities bir ON bir.id=b.city_birth_id
+                JOIN cities exp ON exp.id=b.city_expedition_id
+                JOIN parameters cla ON cla.code=b.classes_id and cla.group='class_military'
+                LEFT JOIN parameters civ ON civ.code=b.civil_status_id and civ.group='civil_status'
+                JOIN parameters cat ON cat.code=b.category_id and cat.group='category'
+                LEFT JOIN parameters pen ON pen.code=b.pensiones_id and pen.group='pension_id'
+                JOIN parameters eps ON eps.code=b.eps_id and eps.group='eps_id'
+                WHERE o.id=" . $id;
 
+        $biog = DB::select($sql);
+        $biog = (array) $biog[0];
+
+//        dd($biog);
         $sql = "
             select d.id,es.description type_study,d.obtained_title,d.institution,res.description concept
             from academic_detail d
             JOIN academic a ON a.id=d.academic_id
             JOIN parameters es ON es.code=d.study_id and es.group='type_study'
             JOIN parameters res ON res.code=d.concept_id and res.group='results'
-            WHERE a.order_id=" . $in["id"] . " ORDER by id desc";
+            WHERE a.order_id=" . $id . " ORDER by id desc";
         $aca = DB::select($sql);
         $aca = (array) $aca;
-        $this->order["academic"] = $aca[0];
+        $biog["academic"] = $aca[0];
 
-        $pdf = \PDF::loadView('Clients.Traicing.pdf', [], (array) $this->order, ['title' => 'Invoice']);
+//        dd($biog["academic"]);
+        $sql = "
+            select d.id,d.description,CASE WHEN si_no=true THEN 'SI' ELSE 'NO' END si_no,q.description question
+            from juridic_detail d   
+            JOIN juridic j ON j.id=d.juridic_id
+            JOIN parameters q ON q.code=d.question_id and q.group='results'
+            WHERE j.order_id=" . $id;
+        $jur = DB::select($sql);
+        $jur = (array) $jur;
+        $biog["juridic"] = $jur;
+
+        $sql = "
+            select d.id, p.description as entity, d.verification_code, d.certificate, d.anotation,d.img
+            from anotation_detail d
+            JOIN anotations a ON a.id=d.anotation_id
+            JOIN parameters as p ON p.code=d.entity_id and p.group='anotations'
+            WHERE a.order_id=" . $id;
+        $anotation = DB::select($sql);
+        $anotation = (array) $anotation;
+        $biog["anotations"] = $anotation;
+
+        $sql = "
+            SELECT d.id, p.description as result, d.business, d.activity, d.phone,d.position, d.fentry, d.fdeparture, d.contact, d.concept
+            from laboral_detail d
+            JOIN laboral l ON l.id=d.laboral_id
+            JOIN parameters as p ON p.code=d.result_id and p.group='results'
+            WHERE l.order_id=" . $id;
+        $laboral = DB::select($sql);
+        $laboral = (array) $laboral;
+        $biog["laboral"] = $laboral;
+
+        $sql = "
+            select d.img,f.description typephoto,d.thumbnail
+            from photo_detail  d
+            JOIN photo p ON p.id=d.photo_id
+            JOIN parameters as f ON f.code=d.typephoto_id and f.group='photo'
+            WHERE p.order_id=" . $id;
+        $photo = DB::select($sql);
+        $photo = (array) $photo;
+        $biog["photo"] = $photo;
+
+
+        $pdf = \PDF::loadView('Clients.Traicing.pdf', [], $biog, ['title' => 'Invoice']);
         $pdf->SetProtection(array(), "andiseg", '12345');
         header('Content-Type: application/pdf');
 
