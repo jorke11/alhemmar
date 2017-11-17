@@ -26,7 +26,7 @@
         <table  style="width:100%;" align="center">
             <tr>
                 <td align="right">Informe #</td>
-                <td>001</td>
+                <td>{{$id}}</td>
             </tr>
         </table>
         <br>
@@ -37,7 +37,7 @@
                 <td width="20%">
                     <table  style="width:100%;" align="center" border="1">
                         <tr>
-                            <td><br><br><br><br><br><br><br><br><br></td>
+                            <td><img src="{{$img}}" width="130px" height="140px"></td>
                         </tr>
                     </table>
                 </td>

@@ -32,7 +32,8 @@ Route::delete('/email/detail/{id}', 'Administration\EmailController@destroyDetai
 Route::resource('/users', 'Security\UsersController');
 
 Route::resource('/traicing', 'Clients\TraicingController');
-Route::put('/traicing/biografic/{id}', 'Clients\TraicingController@updateBiografic');
+Route::post('/traicing/biografic', 'Clients\TraicingController@updateBiografic');
+//Route::put('/traicing/biografic/{id}', 'Clients\TraicingController@updateBiografic');
 Route::put('/traicing/biograficOk/{id}', 'Clients\TraicingController@updateBiograficOk');
 
 Route::get('/traicing/academic/{id}', 'Clients\TraicingController@editAcademic');

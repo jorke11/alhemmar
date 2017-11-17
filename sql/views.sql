@@ -10,7 +10,7 @@ select o.id,o.name,o.last_name,o.document,o.address,o.phone,o.mobil,c.descriptio
 p.description type_document,est.description status,cli.business_name as client,o.cost_center,sch.description as schema,
 ev.description as event,coalesce((aso.name || ' ' ||aso.last_name),'') as responsible,o.event_id,cli.id as client_id,o.created_at,
 o.assigned,now()- o.created_at as tiempo_transcurrido,
-cli.executive_id,o.insert_id,o.position,o.neighborhood,o.city_id,o.comment
+cli.executive_id,o.insert_id,o.position,o.neighborhood,o.city_id,o.comment,o.img
 from orders o 
 JOIN cities c ON c.id=o.city_id
 JOIN users u ON u.id=o.insert_id

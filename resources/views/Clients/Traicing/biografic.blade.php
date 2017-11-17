@@ -13,7 +13,7 @@
         </div>
     </div>
     <div class="panel-body">
-        {!! Form::open(['id'=>'frmBiografic']) !!}
+        {!! Form::open(['id'=>'frmBiografic','files'=>true]) !!}
         <input type="hidden" id="id" name="id" class="input-biografic">
         <input type="hidden" id="order_id" name="order_id" class="input-biografic">
         <div class="row">
@@ -231,13 +231,19 @@
             <div class="col-lg-3">
                 <div class="form-group">
                     <label for="email">Pensiones</label>
-                    <select class="form-control input-biografic input-sm" id="pension_id" name="pension_id" required="">
+                    <select class="form-control input-biografic input-sm" id="pensiones_id" name="pensiones_id" required="">
                         <option value="0">Seleccione</option>
                         @foreach($pensiones as $val)
                         <option value="{{$val->code}}">{{$val->description}}</option>
                         @endforeach
                     </select>
                     
+                </div>
+            </div>
+             <div class="col-lg-3">
+                <div class="form-group">
+                    <label for="email">Foto</label>
+                    <input type="file" class="form-control input-biografic" id="img_person" name='img_person'>
                 </div>
             </div>
         </div>
