@@ -124,12 +124,12 @@ class TraicingController extends Controller {
     }
 
     public function preview($id) {
-        
+
         $sql = "
                 select o.id,o.name,o.last_name,o.document,bir.description city_birthday,exp.description city_expedition,o.client,o.position,
                 0.type_document,b.passport,b.militar_card,cla.description class_militar,b.district,b.age,civ.description civil_status,
                 b.profession,b.professional_card,o.address,o.neighborhood,cit.description city,o.phone,b.phone2,b.email,o.mobil,
-                b.driving_licence,cat.description category,pen.description pension,eps.description eps,o.comment
+                b.driving_licence,cat.description category,pen.description pension,eps.description eps,o.comment,o.img,o.concept_id
                 from vorders o
                 JOIN biografic b ON b.order_id=o.id
                 JOIN cities cit ON cit.id=o.city_id
@@ -141,9 +141,10 @@ class TraicingController extends Controller {
                 LEFT JOIN parameters pen ON pen.code=b.pensiones_id and pen.group='pension_id'
                 JOIN parameters eps ON eps.code=b.eps_id and eps.group='eps_id'
                 WHERE o.id=" . $id;
+        
         $biog = DB::select($sql);
         $biog = (array) $biog[0];
-        
+
 //        dd($biog);
         $sql = "
             select d.id,es.description type_study,d.obtained_title,d.institution,res.description concept
@@ -151,11 +152,11 @@ class TraicingController extends Controller {
             JOIN academic a ON a.id=d.academic_id
             JOIN parameters es ON es.code=d.study_id and es.group='type_study'
             JOIN parameters res ON res.code=d.concept_id and res.group='results'
-            WHERE a.order_id=" . $id." ORDER by id desc";
+            WHERE a.order_id=" . $id . " ORDER by id desc";
         $aca = DB::select($sql);
         $aca = (array) $aca;
         $biog["academic"] = $aca[0];
-        
+
 //        dd($biog["academic"]);
         $sql = "
             select d.id,d.description,CASE WHEN si_no=true THEN 'SI' ELSE 'NO' END si_no,q.description question
@@ -196,7 +197,7 @@ class TraicingController extends Controller {
         $photo = DB::select($sql);
         $photo = (array) $photo;
         $biog["photo"] = $photo;
-        
+
         $pdf = \PDF::loadView('Clients.Traicing.pdf', [], $biog, ['title' => 'Estudio seguridad']);
 //        $pdf->SetProtection(array(), $id, '12345');
         header('Content-Type: application/pdf');
@@ -316,6 +317,7 @@ class TraicingController extends Controller {
         $order = Orders::find($id);
         $order->status_id = 3;
         $order->comment = $in["comment"];
+        $order->concept_id = $in["concept_id"];
         $order->finalized = date("Y-m-d H:i:s");
         $order->save();
 
@@ -500,7 +502,7 @@ class TraicingController extends Controller {
 
     public function edit($id) {
         $row = Biografic::
-                        select("biografic.id", "o.name", "o.last_name", "o.document", "o.document_id", "o.address", "o.phone", "o.mobil", "o.city_id", DB::raw("biografic.*"), "o.neighborhood")
+                        select("biografic.id", "o.name", "o.last_name", "o.document", "o.document_id", "o.address", "o.phone", "o.mobil", "o.city_id", DB::raw("biografic.*"), "o.neighborhood", "o.img")
                         ->join(DB::raw("orders o"), "o.id", "biografic.order_id")
                         ->where("order_id", $id)->first();
 
@@ -528,7 +530,7 @@ class TraicingController extends Controller {
 
     public function editDomicile($id) {
         $header = Domicile::where("order_id", $id)->first();
-        
+
         return response()->json(["header" => $header]);
     }
 
@@ -574,11 +576,37 @@ class TraicingController extends Controller {
         }
     }
 
-    public function updateBiografic(Request $request, $id) {
-        $row = Biografic::FindOrFail($id);
+    public function updateBiografic(Request $request) {
+        $in = $request->all();
 
-        $input = $request->all();
-        $result = $row->fill($input)->save();
+        $row = Biografic::FindOrFail($in["id"]);
+
+        $file = Input::file('img_person');
+
+        $image = Image::make(Input::file('img_person'));
+        $path = public_path() . '/uploads/' . $in["id"] . "/";
+
+        File::makeDirectory($path, $mode = 0777, true, true);
+
+        $in["img"] = 'uploads/' . $in["id"] . '/' . $file->getClientOriginalName();
+        $image->resize(130, 140);
+        $image->save($path . $file->getClientOriginalName());
+
+//        $image->resize(240, 200);
+//        $in["thumbnail"] = 'uploads/' . $input["id"] . '/thumb_' . $file->getClientOriginalName();
+//        $image->save($path . 'thumb_' . $file->getClientOriginalName());
+
+        $order = Orders::find($in["order_id"]);
+        $order->img = $in["img"];
+        $order->save();
+
+        unset($in["id"]);
+        unset($in["img_person"]);
+        unset($in["img"]);
+
+
+
+        $result = $row->fill($in)->save();
         if ($result) {
             return response()->json(['success' => true]);
         } else {

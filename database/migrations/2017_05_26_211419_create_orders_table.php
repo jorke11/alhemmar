@@ -35,6 +35,8 @@ class CreateOrdersTable extends Migration {
             $table->datetime("assigned")->nullable();
             $table->datetime("finalized")->nullable();
             $table->text('comment')->nullable();
+            $table->text('img')->nullable();
+            $table->integer('concept_id')->nullable();
             $table->timestamps();
         });
     }
@@ -49,3 +51,4 @@ class CreateOrdersTable extends Migration {
     }
 
 }
+

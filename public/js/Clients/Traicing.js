@@ -28,7 +28,7 @@ function Traicing() {
 
         $("#tabDomicile").click(this.loadDomicile)
         $("#btnSaveDomicile").click(this.saveDomicile);
-        
+
 
         $("#tabPhoto").click(this.loadPhoto)
         $("#btnSavePhoto").click(this.savePhoto);
@@ -62,7 +62,7 @@ function Traicing() {
         $(".input-laboral").cleanFields();
         $("#frmLaboral #order_id").val(order_id)
         $("#frmLaboral #id").val(id)
-        
+
     }
 
     this.send = function () {
@@ -93,6 +93,7 @@ function Traicing() {
         var token = $("input[name=_token]").val();
         var param = {};
         param.comment = $("#frmFinish #comment").val();
+        param.concept_id = $("#frmFinish #concept_id").val();
         $.ajax({
             url: 'traicing/finish/' + $("#frmBiografic #order_id").val(),
             method: "PUT",
@@ -624,15 +625,19 @@ function Traicing() {
         var validate = $(".input-biografic").validate();
 
         if (validate.length == 0) {
-            method = 'PUT';
-            url = "traicing/biografic/" + id;
+            url = "traicing/biografic/";
             msg = "Edited Record";
+
+            var formData = new FormData($("#frmBiografic")[0]);
 
             $.ajax({
                 url: url,
-                method: method,
-                data: data,
+                method: 'POST',
+                data: formData,
                 dataType: 'JSON',
+                processData: false,
+                cache: false,
+                contentType: false,
                 success: function (data) {
                     if (data.success == true) {
                         $(".input-biografic").setFields({data: data});

@@ -27,7 +27,8 @@
     position:fixed;
     z-index: 10000;
     left: 16%;
-    top: 20%
+    top: 20%;
+    background-image:url("../img/logo70x32.png");
 }
 
 

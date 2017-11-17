@@ -111,7 +111,11 @@
         <table  style="width:100%;" align="center">
             <tr>
                 <td><b>Resultado Final</b></td>
+                @if($concept_id==1)
                 <td><b><u>Apto para continuar el proceso</u></b></td>
+                @else
+                <td><b><u style="color:red">No Apto para continuar el proceso</u></b></td>
+                @endif
             </tr>
         </table>
         <br>
