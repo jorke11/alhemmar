@@ -93,7 +93,7 @@ class TraicingController extends Controller {
             JOIN academic a ON a.id=d.academic_id
             JOIN parameters es ON es.code=d.study_id and es.group='type_study'
             JOIN parameters res ON res.code=d.concept_id and res.group='results'
-            WHERE a.order_id=" . $id . " ORDER by id desc";
+            WHERE a.order_id=" . $in["id"] . " ORDER by id desc";
         $aca = DB::select($sql);
         $aca = (array) $aca;
         $this->order["academic"] = $aca[0];
