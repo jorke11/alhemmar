@@ -100,7 +100,7 @@
 
     .menu-white-word{
         color: #0066cc;
-                display: inline;
+        display: inline;
     }
 
     .menu-black-word{
@@ -115,10 +115,10 @@
 <div id="space-nav">
 
 </div>
-<div style='background-image: url("img/fondo_2.png");background-size: 100%;background-repeat: no-repeat;width: 100%;height: 600px;padding-top: 10px;' id="img-main">
-    <div class="container">
+<div class="container-fluid">
+    <div style='background-image: url("img/fondo_2.png");background-size: 100%;background-repeat: no-repeat;width: 100%;height: 600px;padding-top: 10px;' id="img-main">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 col-xs-12">
             </div>
         </div>
     </div>

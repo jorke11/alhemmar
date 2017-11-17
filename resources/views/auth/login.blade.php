@@ -10,7 +10,7 @@
      background: linear-gradient(to bottom, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 0%, rgba(246,41,12,1) 51%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 100%);
      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#e73827', GradientType=0 );">
     <div class="container" >
-        <div style="width: 100%;height: 100px">
+        <div style="width: 100%;height: 50px">
         </div>
         <div class="row">
             <div class="col-md-5 col-center">
@@ -20,7 +20,7 @@
                             <div class="row" style="padding-bottom: 4%">
                                 <div class="col-lg-12">
                                     <p class="text-center">
-                                        <img src="/img/Logo159x89.png">
+                                        <img src="/img/logo_blanco.png" width="90%">
                                     </p>
                                 </div>
                             </div>
