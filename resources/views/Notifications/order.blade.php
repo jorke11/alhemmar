@@ -20,7 +20,7 @@
                 <td>
                     <table width="700" align="center"  border="0" cellspacing="0"cellpadding="0">
                         <tr>
-                            <td width='30%' >
+                            <td width='40%' >
                                 <img src="{!!asset('img/logo.png')!!}" width="100">
                             </td> 
                             <td rowspan="2"><h2 class="title">Generación de Orden #{{isset($id)?$id:''}}<br>de {{ucwords($client)}}</h2></td> 

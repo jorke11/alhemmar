@@ -18,8 +18,8 @@
                 <td>
                     <table width="700" align="center"  border="0" cellspacing="0"cellpadding="0">
                         <tr>
-                            <td width='30%' >
-                                <img src="{!!asset('img/Logo.png')!!}" width="100">
+                            <td width='40%' >
+                                <img src="{!!asset('img/logo.png')!!}" width="100">
                             </td> 
                             <td rowspan="2"><h2 class="title">Resultado de estudio</h2></td> 
                         </tr>
