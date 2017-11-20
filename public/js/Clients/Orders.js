@@ -1,5 +1,5 @@
 function Orders() {
-    var table, product = 0;
+    var table, product = 0, cont = 0;
     this.init = function () {
         $("#btnNew").click(this.new);
         $("#btnSave").click(this.save);
@@ -9,10 +9,10 @@ function Orders() {
             $("#btnSave").attr("disabled", true);
         })
         table = obj.table();
-        var progress = 0, cont = 0;
+        var progress = 0;
         $(".input-orders").blur(function () {
             cont = 0;
-            $(".input-orders").each(function () {
+                        $(".input-orders").each(function () {
                 var elem = $(this);
 
                 if (elem.attr('type') == 'text' && elem.val() != '') {
@@ -21,6 +21,10 @@ function Orders() {
                     cont++;
                 }
             });
+
+            console.log("product: " + product);
+            console.log("cont: " + cont);
+
             cont += product;
             progress = cont * 7.7;
             $("#bar-progress").css("width", progress + "%").html(progress + "% Complete");
@@ -34,12 +38,13 @@ function Orders() {
 
 
 
-
     }
 
     this.new = function () {
         $(".input-orders").cleanFields();
         $("#btnSave").attr("disabled", false);
+        $("#bar-progress").css("width", "0%").html("0% Complete");
+        product = 0;
     }
 
     this.associateUser = function () {
@@ -117,30 +122,31 @@ function Orders() {
         }
     }
 
-    this.selectionProduct = function (id) {
+    this.selectionProduct = function (id, description) {
+        var total = 0;
+        product++;
+        $("#service-selected").empty()
+        if (product == 1) {
 
-        var cont = 0, total;
-        product = 1;
-        $(".input-orders").each(function () {
-            var elem = $(this);
+            cont += product;
 
-            if (elem.attr('type') == 'text' && elem.val() != '') {
-                cont++;
-            } else if (elem.get(0).tagName == 'SELECT' && elem.val() != 0) {
-                cont++;
+            total = cont * 7.7;
+
+            console.log("total selec " + total);
+            console.log("cont selec " + cont);
+            $("#bar-progress").css("width", total + "%").html(total + "% Complete");
+
+            product = 1;
+
+            if (cont == 13) {
+                $("#bar-progress").css("width", "100%").html("100% Completado").removeClass("progress-bar-info").addClass("progress-bar-success");
             }
-        });
 
-        total = (cont + product) * 7.7;
-        
-        $("#bar-progress").css("width", total + "%").html(total + "% Complete");
-
-        if (cont == 13) {
-            $("#bar-progress").css("width", "100%").html("100% Completado").removeClass("progress-bar-info").addClass("progress-bar-success");
         }
-        
         $(".thumbnail").removeClass("selectedItem");
         $("#item_" + id).toggleClass("selectedItem");
+        $("#service-selected").html('<li class="list-group-item"><b>' + description + '</b></li>');
+
         $("#frm #schema_id").val(id);
     }
 

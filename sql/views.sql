@@ -20,7 +20,9 @@ JOIN schedules sch ON sch.id=o.schema_id
 JOIN departments d ON d.id=o.department_id
 JOIN parameters p ON p.code=o.document_id and p.group='type_document'
 JOIN parameters est ON est.code=o.status_id and est.group='status_order'
-JOIN parameters ev ON ev.code=o.event_id and ev.group='events' Order BY o.created_at desc;
+JOIN parameters ev ON ev.code=o.event_id and ev.group='events' 
+Order BY o.created_at desc;
+
 
 
 

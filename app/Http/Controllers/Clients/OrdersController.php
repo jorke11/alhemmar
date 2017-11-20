@@ -106,11 +106,12 @@ class OrdersController extends Controller {
 
 
                 $result = Orders::create($input);
+
                 if ($result) {
+
                     $in = (array) DB::table("vorders")->where("id", $result->id)->first();
 
                     if (count($this->email) > 0) {
-
                         Mail::send("Notifications.order", $in, function($msj) {
                             $msj->subject("notificacion");
                             $msj->to($this->email);
