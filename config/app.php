@@ -143,6 +143,9 @@ return [
         Yajra\Datatables\DatatablesServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         niklasravnsborg\LaravelPdf\PdfServiceProvider::class,
+        Barryvdh\Cors\ServiceProvider::class,
+        
+
         /*
          * Package Service Providers...
          */
@@ -159,6 +162,8 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        Laravel\Passport\PassportServiceProvider::class,
+
     ],
     /*
       |--------------------------------------------------------------------------

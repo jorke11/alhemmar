@@ -33,7 +33,6 @@ Route::resource('/users', 'Security\UsersController');
 
 Route::resource('/traicing', 'Clients\TraicingController');
 Route::post('/traicing/biografic', 'Clients\TraicingController@updateBiografic');
-//Route::put('/traicing/biografic/{id}', 'Clients\TraicingController@updateBiografic');
 Route::put('/traicing/biograficOk/{id}', 'Clients\TraicingController@updateBiograficOk');
 
 Route::get('/traicing/academic/{id}', 'Clients\TraicingController@editAcademic');
@@ -110,7 +109,7 @@ Route::get('/api/listCity', function() {
 Route::get('/api/listClients', function() {
     $query = DB::table("vclient");
     if (Auth::user()->role_id != 1) {
-        
+
         $query->where("executive_id", Auth::user()->id);
     }
     return Datatables::queryBuilder($query)->make(true);
@@ -155,3 +154,5 @@ Route::get('/api/listTraicing', function() {
 
 Route::get('/api/getCity', 'Administration\SeekController@getCity');
 Route::get('/api/getDepartment', 'Administration\SeekController@getDepartment');
+
+include __DIR__ . '/movil.php';
