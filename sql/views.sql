@@ -12,11 +12,11 @@ ev.description as event,coalesce((aso.name || ' ' ||aso.last_name),'') as respon
 o.assigned,now()- o.created_at as tiempo_transcurrido,
 cli.executive_id,o.insert_id,o.position,o.neighborhood,o.city_id,o.comment,o.img,o.concept_id
 from orders o 
-JOIN cities c ON c.id=o.city_id
-JOIN users u ON u.id=o.insert_id
+left JOIN cities c ON c.id=o.city_id
+lefT JOIN users u ON u.id=o.insert_id
 LEFT JOIN users aso ON aso.id=o.responsible_id
-JOIN clients cli ON cli.id=u.client_id
-JOIN schedules sch ON sch.id=o.schema_id
+left JOIN clients cli ON cli.id=u.client_id
+left JOIN schedules sch ON sch.id=o.schema_id
 JOIN departments d ON d.id=o.department_id
 JOIN parameters p ON p.code=o.document_id and p.group='type_document'
 JOIN parameters est ON est.code=o.status_id and est.group='status_order'
