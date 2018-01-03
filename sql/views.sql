@@ -24,6 +24,7 @@ JOIN parameters ev ON ev.code=o.event_id and ev.group='events'
 Order BY o.created_at desc;
 
 
+create view
 
 
 create view vtraicing as 
