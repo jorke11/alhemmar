@@ -157,7 +157,7 @@ function Traicing() {
         var validate = $(".input-academic").validate();
 
         if (validate.length == 0) {
-            url = "traicing/academic/";
+            url = "traicing/academic";
             msg = "Add Record";
 
             var token = $("input[name=_token]").val();
@@ -293,7 +293,7 @@ function Traicing() {
 
         if (validate.length == 0) {
             method = 'PUT';
-            url = "traicing/laboral/";
+            url = "traicing/laboral";
             msg = "Add Record";
 
             var token = $("input[name=_token]").val();
@@ -365,7 +365,7 @@ function Traicing() {
 
         if (validate.length == 0) {
             method = 'PUT';
-            url = "traicing/anotations/";
+            url = "traicing/anotations";
             msg = "Add Record";
 
             var token = $("input[name=_token]").val();
@@ -553,7 +553,7 @@ function Traicing() {
 
         if (validate.length == 0) {
             method = 'PUT';
-            url = "traicing/juridic/";
+            url = "traicing/juridic";
             msg = "Add Record";
 
             var token = $("input[name=_token]").val();
@@ -625,7 +625,7 @@ function Traicing() {
         var validate = $(".input-biografic").validate();
 
         if (validate.length == 0) {
-            url = "traicing/biografic/";
+            url = "traicing/biografic";
             msg = "Edited Record";
 
             var formData = new FormData($("#frmBiografic")[0]);

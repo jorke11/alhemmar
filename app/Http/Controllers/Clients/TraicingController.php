@@ -480,14 +480,16 @@ class TraicingController extends Controller {
             unset($input["id"]);
 
             $file = Input::file('photo');
+            
+            if ($file != null) {
+                $image = Image::make(Input::file('photo'));
+                $path = public_path() . '/uploads/anotations/' . $input["anotation_id"] . "/";
 
-            $image = Image::make(Input::file('photo'));
-            $path = public_path() . '/uploads/anotations/' . $input["anotation_id"] . "/";
+                File::makeDirectory($path, $mode = 0777, true, true);
 
-            File::makeDirectory($path, $mode = 0777, true, true);
-
-            $input["img"] = 'uploads/anotations/' . $input["anotation_id"] . '/' . $file->getClientOriginalName();
-            $image->save($path . $file->getClientOriginalName());
+                $input["img"] = 'uploads/anotations/' . $input["anotation_id"] . '/' . $file->getClientOriginalName();
+                $image->save($path . $file->getClientOriginalName());
+            }
             unset($input["photo"]);
 
             $result = AnotationsDetail::create($input);
@@ -655,24 +657,27 @@ class TraicingController extends Controller {
 
         $row = Biografic::FindOrFail($in["id"]);
 
+        $order = Orders::find($in["order_id"]);
+
         $file = Input::file('img_person');
 
-        $image = Image::make(Input::file('img_person'));
-        $path = public_path() . '/uploads/' . $in["id"] . "/";
+        if ($file != null) {
+            $image = Image::make(Input::file('img_person'));
+            $path = public_path() . '/uploads/' . $in["id"] . "/";
 
-        File::makeDirectory($path, $mode = 0777, true, true);
+            File::makeDirectory($path, $mode = 0777, true, true);
 
-        $in["img"] = 'uploads/' . $in["id"] . '/' . $file->getClientOriginalName();
-        $image->resize(130, 140);
-        $image->save($path . $file->getClientOriginalName());
+            $in["img"] = 'uploads/' . $in["id"] . '/' . $file->getClientOriginalName();
+            $image->resize(130, 140);
+            $image->save($path . $file->getClientOriginalName());
+            $order->img = $in["img"];
+        }
 
 //        $image->resize(240, 200);
 //        $in["thumbnail"] = 'uploads/' . $input["id"] . '/thumb_' . $file->getClientOriginalName();
 //        $image->save($path . 'thumb_' . $file->getClientOriginalName());
 
-        $order = Orders::find($in["order_id"]);
-        $order->img = $in["img"];
-        $order->save();
+
 
         unset($in["id"]);
         unset($in["img_person"]);

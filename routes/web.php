@@ -79,7 +79,8 @@ Route::delete('/schedules/detail/{id}', 'Administration\SchedulesController@dest
 
 Route::resource('/orders', 'Clients\OrdersController');
 Route::put('/orders/associate/{order_id}', 'Clients\OrdersController@updateAssociate');
-
+Route::get('/orders/getCities/{id}', 'Clients\OrdersController@getCitites');
+Route::get('/testordermail/{id}', 'Clients\OrdersController@TestNotificacionOrder');
 
 Route::get('/api/listEmail', function() {
     return Datatables::eloquent(App\Models\Administration\Email::query())->make(true);

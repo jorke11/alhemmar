@@ -8,6 +8,7 @@
                         <tr>
                             <th></th>
                             <th>Razón Social</th>
+                            <th>Cliente</th>
                             <th>Tipo Document</th>
                             <th>Documento</th>
                             <th>Verificacion</th>

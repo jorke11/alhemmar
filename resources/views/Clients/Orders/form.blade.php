@@ -26,12 +26,12 @@
                     </div>
 
 
-<!--                    <div class="progress">
-                        <div class="progress-bar progress-bar-success" role="progressbar"
-                             aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 0%" id="bar-progress">
-                            <span class="sr-only">40% completado (éxito)</span>
-                        </div>
-                    </div>-->
+                    <!--                    <div class="progress">
+                                            <div class="progress-bar progress-bar-success" role="progressbar"
+                                                 aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 0%" id="bar-progress">
+                                                <span class="sr-only">40% completado (éxito)</span>
+                                            </div>
+                                        </div>-->
                     <br>
                     {!! Form::open(['id'=>'frm']) !!}
                     <input type="hidden" id="id" name="id" class="input-orders">
@@ -76,15 +76,6 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label for="email">Centro de costo</label>
-                                <input type="text" class="form-control input-orders input-sm" id="cost_center" name='cost_center' required="">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="form-group">
                                 <label for="email">Departamento</label>
                                 <select class="form-control input-orders input-sm" id="department_id" name="department_id" required>
                                     <option value="0">Seleccione</option>
@@ -94,15 +85,15 @@
                                 </select>
                             </div>
                         </div>
+                    </div>
+
+                    <div class="row">
+
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label for="email">Ciudad</label>
                                 <select class="form-control input-orders input-sm" id="city_id" name="city_id" required>
                                     <option value="0">Seleccione</option>
-                                    @foreach($cities as $val)
-                                    <option value="{{$val->id}}">{{$val->description}}</option>
-                                    @endforeach
-
                                 </select>
                             </div>
                         </div>
@@ -112,14 +103,15 @@
                                 <input type="text" class="form-control input-orders input-sm" id="address" name='address' required="">
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label for="email">Barrio</label>
                                 <input type="text" class="form-control input-orders input-sm" id="neighborhood" name='neighborhood' required="">
                             </div>
                         </div>
+                    </div>
+                    <div class="row">
+
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label for="email">Telefono</label>

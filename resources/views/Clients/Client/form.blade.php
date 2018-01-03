@@ -7,7 +7,7 @@
                         <div class="col-lg-3"></div>
                         <div class="col-lg-9 text-right">
                             @if(Auth::user()->role_id==1)
-                            <button class="btn btn-success btn-sm" type="button" id="btnNew">
+                            <button class="btn btn-info btn-sm" type="button" id="btnNew">
                                 <span class="glyphicon glyphicon-plus" aria-hidden="true"> Nuevo</span>
                             </button>
                             <button class="btn btn-success btn-sm" type="button" id="btnSave">
@@ -21,13 +21,22 @@
                     {!! Form::open(['id'=>'frm']) !!}
                     <input type="hidden" id="id" name="id" class="input-clients">
                     <div class="row">
-                        <div class="col-lg-8">
+                        <div class="col-lg-7">
                             <div class="form-group">
                                 <label for="email">Razón Social</label>
                                 <input type="text" class="form-control input-clients input-sm" id="business_name" name='business_name' required="">
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-5">
+                            <div class="form-group">
+                                <label for="email">Cliente</label>
+                                <input type="text" class="form-control input-clients input-sm" id="business" name='business' required="">
+                            </div>
+                        </div>
+                     
+                    </div>
+                    <div class="row">
+                           <div class="col-lg-4">
                             <div class="form-group">
                                 <label for="email">Tipo de Documento</label>
                                 <select class="form-control input-clients input-sm" id="document_id" name="document_id" required>
@@ -38,15 +47,13 @@
                                 </select>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="email">Documento</label>
                                 <input type="text" class="form-control input-clients input-sm" id="document" name='document' required="" data-type="number">
                             </div>
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-2">
                             <div class="form-group">
                                 <label for="email">Verificacion</label>
                                 <input type="text" class="form-control input-clients input-sm" id="verification" name='verification' required="" data-type="number" readonly="">

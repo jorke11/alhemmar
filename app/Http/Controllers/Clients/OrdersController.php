@@ -28,11 +28,10 @@ class OrdersController extends Controller {
     }
 
     public function index() {
-        
+
         $esquemas = Schedules::all();
         $type_document = Parameters::where("group", "type_document")->get();
         $users = Users::where("role_id", 3)->get();
-        $cities = Cities::all();
         $department = Department::all();
 
         foreach ($esquemas as $i => $value) {
@@ -42,8 +41,7 @@ class OrdersController extends Controller {
         }
 
 
-        
-        return view("Clients.Orders.init", compact("esquemas", "type_document", "department", "cities", "users"));
+        return view("Clients.Orders.init", compact("esquemas", "type_document", "department", "users"));
     }
 
     public function create() {
@@ -60,6 +58,12 @@ class OrdersController extends Controller {
         $this->email[] = $user->email;
 
         $in = (array) DB::table("vorders")->where("id", $id)->first();
+        $sche = Schedules::find($in["schema_id"]);
+        $in["schema"] = $sche->description;
+        $in["schema_detail"] = SchedulesDetail::select("schedules_detail.id", "courses.description as course")
+                        ->join("courses", "courses.id", "schedules_detail.course_id")
+                        ->where("schedule_id", $sche->id)->get();
+
 
         Mail::send("Notifications.associate", $in, function($msj) {
             $msj->subject("notificacion");
@@ -105,11 +109,26 @@ class OrdersController extends Controller {
                 }
 
 
+                $con = DB::table('orders')->where("insert_id", Auth::User()->client_id)->max('consecutive');
+
+                if ($con == null) {
+                    $input["consecutive"] = 1;
+                } else {
+                    $input["consecutive"] = $con + 1;
+                }
+
                 $result = Orders::create($input);
 
                 if ($result) {
 
                     $in = (array) DB::table("vorders")->where("id", $result->id)->first();
+
+                    $sche = Schedules::find($in["schema_id"]);
+                    $in["schema"] = $sche->description;
+                    $in["schema_detail"] = SchedulesDetail::select("schedules_detail.id", "courses.description as course")
+                                    ->join("courses", "courses.id", "schedules_detail.course_id")
+                                    ->where("schedule_id", $sche->id)->get();
+
 
                     if (count($this->email) > 0) {
                         Mail::send("Notifications.order", $in, function($msj) {
@@ -130,8 +149,35 @@ class OrdersController extends Controller {
         }
     }
 
+    public function TestNotificacionOrder($id) {
+//        $order = Orders::find($id);
+        $order = Orders::find($id);
+        $sche = Schedules::find($order->schema_id);
+        $schema = $sche->description;
+        $schema_detail = SchedulesDetail::select("schedules_detail.id", "courses.description as course")
+                        ->join("courses", "courses.id", "schedules_detail.course_id")
+                        ->where("schedule_id", $sche->id)->get();
+
+        $user = \App\User::find($order->insert_id);
+        $client = Client::find($user->client_id)->business_name;
+
+        $name = "jorge";
+        $last_name = "pinedo";
+        $document = "10323232";
+        $city = "bogota";
+        $mobil = "3203776811";
+        $department = "3203776811";
+
+        return view("Notifications.order", compact("id", "client", "name", "last_name", "document", "city", "mobil", "schema", "schema_detail", "department"));
+    }
+
     public function edit($id) {
         $row = Orders::FindOrFail($id);
+        return response()->json($row);
+    }
+
+    public function getCitites($id) {
+        $row = Cities::where("department_id", $id)->get();
         return response()->json($row);
     }
 

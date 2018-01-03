@@ -1,8 +1,8 @@
 <html>
     <head>
         <style type="text/css">
-            #main {border:#0471b4 1px solid;border-radius: 5px;}
-            .title{color:#005b94;font-weight: bold;}
+            #main {border:#fd4b3e 1px solid;border-radius: 5px;}
+            .title{color:#fd4b3e;font-weight: bold;}
         </style>
     </head>
 
@@ -16,7 +16,7 @@
 
 
 
-        <table  width="700" align="center" id="main"  border="0" cellspacing="0"cellpadding="0">
+        <table  width="700" align="center" id="main"  border="0" cellspacing="0"cellpadding="20">
             <tr>
                 <td>
                     <table width="700" align="center"  border="0" cellspacing="0"cellpadding="0">
@@ -24,7 +24,7 @@
                             <td width='30%' >
                                 <img src="{!!asset('img/Logo.png')!!}" width="100">
                             </td> 
-                            <td rowspan="2"><h2 class="title">Hola,{{$name . " ".$last_name }} la Orden #{{$id}} te ha sido asociada<br>Cliente {{ucwords($client)}}</h2></td> 
+                            <td rowspan="2"><h2 class="title">Hola {{$name . " ".$last_name }}, la Orden #{{$consecutive}} te ha sido asociada<br>Cliente {{ucwords($client)}}</h2></td> 
                         </tr>
                         <tr>
 
@@ -51,13 +51,27 @@
                             <td>{{$city}}</td>
                         </tr>
                         <tr>
-                            <td><b>Centro de Costo</b></td>
-                            <td>{{$cost_center}}</td>
-                        </tr>
-                        <tr>
                             <td><b>Celular</b></td>
                             <td>{{$mobil}}</td>
                         </tr>
+
+                        <tr>
+                            <td><b>Paquete</b></td>
+                            <td>{{$schema}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Servicios</b></td>
+                            <td>
+                                <ul>
+                                    @foreach($schema_detail as $val)
+                                    <li>{{$val->course}}</li>
+                                    @endforeach
+
+
+                                </ul>
+                            </td>
+                        </tr>
+
                         <tr>
                             <td><br><br></td>
                         </tr>
