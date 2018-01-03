@@ -157,6 +157,7 @@ function Client() {
             dataType: 'JSON',
             success: function (data) {
                 $(".input-clients").setFields({data: data});
+                $("#btnSave").attr("disabled",false);
             }
         })
     }
@@ -191,6 +192,7 @@ function Client() {
             columns: [
                 {data: "id"},
                 {data: "business_name"},
+                {data: "business"},
                 {data: "type_document"},
                 {data: "document"},
                 {data: "verification"},

@@ -8,11 +8,12 @@ function Orders() {
             $(".input-orders").cleanFields({disabled: true});
             $("#btnSave").attr("disabled", true);
         })
+
         table = obj.table();
         var progress = 0;
         $(".input-orders").blur(function () {
             cont = 0;
-                        $(".input-orders").each(function () {
+            $(".input-orders").each(function () {
                 var elem = $(this);
 
                 if (elem.attr('type') == 'text' && elem.val() != '') {
@@ -26,14 +27,34 @@ function Orders() {
             console.log("cont: " + cont);
 
             cont += product;
-            progress = cont * 7.7;
+            progress = cont * 8.3;
             $("#bar-progress").css("width", progress + "%").html(progress + "% Complete");
 
-            if (cont == 13) {
+            if (cont == 12) {
                 $("#bar-progress").css("width", "100%").html("100% Completado").removeClass("progress-bar-info").addClass("progress-bar-success");
             }
 
 //            $("#bar-progress").html(progress + "%");
+        })
+
+        $("#department_id").change(function () {
+            var elem = $(this);
+            var token = $("input[name=_token]").val();
+
+            $.ajax({
+                url: 'orders/getCities/' + elem.val(),
+                method: 'GET',
+                headers: {'X-CSRF-TOKEN': token},
+                dataType: 'JSON',
+                success: function (data) {
+                    var html = '';
+                    $.each(data, function (i, val) {
+                        html += '<option value="' + val.id + '">' + val.description + "</option>";
+                    })
+                    $("#city_id").html(html);
+
+                }
+            })
         })
 
 
@@ -130,7 +151,7 @@ function Orders() {
 
             cont += product;
 
-            total = cont * 7.7;
+            total = cont * 8.3;
 
             console.log("total selec " + total);
             console.log("cont selec " + cont);
@@ -138,7 +159,7 @@ function Orders() {
 
             product = 1;
 
-            if (cont == 13) {
+            if (cont == 12) {
                 $("#bar-progress").css("width", "100%").html("100% Completado").removeClass("progress-bar-info").addClass("progress-bar-success");
             }
 

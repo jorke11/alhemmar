@@ -7,10 +7,10 @@ join departments d ON d.id=c.department_id;
 drop view vorders
 create view vorders as 
 select o.id,o.name,o.last_name,o.document,o.address,o.phone,o.mobil,c.description city,d.description department,
-p.description type_document,est.description status,cli.business_name as client,o.cost_center,sch.description as schema,
+p.description type_document,est.description status,cli.business_name as client,sch.description as schema,
 ev.description as event,coalesce((aso.name || ' ' ||aso.last_name),'') as responsible,o.event_id,cli.id as client_id,o.created_at,
 o.assigned,now()- o.created_at as tiempo_transcurrido,
-cli.executive_id,o.insert_id,o.position,o.neighborhood,o.city_id,o.comment,o.img,o.concept_id
+cli.executive_id,o.insert_id,o.position,o.neighborhood,o.city_id,o.comment,o.img,o.concept_id,o.schema_id,o.consecutive
 from orders o 
 left JOIN cities c ON c.id=o.city_id
 lefT JOIN users u ON u.id=o.insert_id
@@ -25,10 +25,9 @@ Order BY o.created_at desc;
 
 
 
-
 create view vtraicing as 
 select o.id,o.name,o.last_name,o.document,o.address,o.phone,o.mobil,c.description city,d.description department,
-p.description type_document,est.description status,cli.business_name as client,o.cost_center,sch.description as schema,
+p.description type_document,est.description status,cli.business_name as client,sch.description as schema,
 ev.description as event,aso.name || ' ' ||aso.last_name responsible,o.event_id,responsible_id,o.status_id
 from orders o 
 JOIN cities c ON c.id=o.city_id
@@ -45,9 +44,11 @@ WHERE o.status_id<>1;
 
 
 
+
+drop view vclient
 create view vclient as
 select  c.id,reg.description regimen,per.description person,ci.description city,doc.description as type_document
-,de.description department,c.document,c.verification,c.address,c.mobil,c.business_name,c.status_id,c.executive_id
+,de.description department,c.document,c.verification,c.address,c.mobil,c.business_name,c.status_id,c.executive_id,c.business
 from clients c
 JOIN parameters reg ON reg.code=c.regimen_id and reg.group='regimen_id'
 JOIN parameters per ON per.code=c.person_id and per.group='person_id'
