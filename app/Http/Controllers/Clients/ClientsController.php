@@ -52,7 +52,7 @@ class ClientsController extends Controller {
                     return response()->json(['success' => false, "msg" => "Documento ya existe!"], 409);
                 }
             } catch (Exception $exc) {
-                return response()->json(['success' => false, "msg" => "Problemas con l ejecución"], 409);
+                return response()->json(['success' => false, "msg" => "Problemas con la ejecución"], 409);
             }
         }
     }

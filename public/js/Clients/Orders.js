@@ -28,7 +28,7 @@ function Orders() {
 
             cont += product;
             progress = cont * 8.3;
-            $("#bar-progress").css("width", progress + "%").html(progress + "% Complete");
+            $("#bar-progress").css("width", progress + "%").html(progress + "% Completado");
 
             if (cont == 12) {
                 $("#bar-progress").css("width", "100%").html("100% Completado").removeClass("progress-bar-info").addClass("progress-bar-success");
@@ -135,7 +135,7 @@ function Orders() {
                 })
             } else {
                 $("#btnSave").attr("disabled", false);
-                toastr.error("Fields Required!");
+                toastr.error("Campos Requeridos!");
             }
         } else {
             $("#btnSave").attr("disabled", false);
@@ -155,7 +155,7 @@ function Orders() {
 
             console.log("total selec " + total);
             console.log("cont selec " + cont);
-            $("#bar-progress").css("width", total + "%").html(total + "% Complete");
+            $("#bar-progress").css("width", total + "%").html(total + "% Completado");
 
             product = 1;
 

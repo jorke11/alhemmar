@@ -91,7 +91,7 @@ function Email() {
                 }
             })
         } else {
-            toastr.error("Fields Required!");
+            toastr.error("Campos requeridos!");
         }
     }
 

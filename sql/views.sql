@@ -24,8 +24,7 @@ JOIN parameters ev ON ev.code=o.event_id and ev.group='events'
 Order BY o.created_at desc;
 
 
-create view
-
+drop view vtraicing
 create view vtraicing as 
 select o.id,o.name,o.last_name,o.document,o.address,o.phone,o.mobil,c.description city,d.description department,
 p.description type_document,est.description status,cli.business_name as client,sch.description as schema,
