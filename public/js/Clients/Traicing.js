@@ -571,7 +571,7 @@ function Traicing() {
                 }
             })
         } else {
-            toastr.error("Fields Required!");
+            toastr.error("Campos Requeridos!");
         }
     }
 
@@ -649,7 +649,7 @@ function Traicing() {
             })
         } else {
             $("#btnSaveBiografic").attr("disabled", false);
-            toastr.error("Fields Required!");
+            toastr.error("Campos Requeridos!");
         }
     }
 
@@ -815,7 +815,7 @@ function Traicing() {
                 }
             })
         } else {
-            toastr.error("Fields Required!");
+            toastr.error("Campos Requeridos!");
         }
     }
 
@@ -846,7 +846,7 @@ function Traicing() {
                 }
             })
         } else {
-            toastr.error("Fields Required!");
+            toastr.error("Campos Requeridos!");
         }
     }
 
@@ -886,7 +886,7 @@ function Traicing() {
                 }
             })
         } else {
-            toastr.error("Fields Required!");
+            toastr.error("Campos requeridos!");
         }
     }
 
