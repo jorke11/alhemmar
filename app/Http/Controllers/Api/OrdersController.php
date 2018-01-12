@@ -82,8 +82,18 @@ class OrdersController extends Controller {
         }
     }
 
-    public function getOrdes() {
+    public function getOrders() {
         $sql = DB::table("vorders")->get();
+        return response()->json($sql);
+    }
+
+    public function cancelOrder($id) {
+
+        $row = Orders::find($id);
+        $row->status_id = 4;
+        $row->save();
+        $sql = DB::table("vorders")->get();
+
         return response()->json($sql);
     }
 
