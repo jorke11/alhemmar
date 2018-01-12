@@ -491,7 +491,7 @@
                         <p>
                             <span class="glyphicon glyphicon-road" aria-hidden="true"></span>
 
-                            Carrera 20 No 71 a 30
+                            Carrera 19 No 71a - 23 Oficina 9
                         </p>
                     </div>
                 </div>
@@ -499,7 +499,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="color:white;">
                         <p>
                             <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
-                            Conmutador 3229962
+                            Telefono 2356856
                         </p>
                     </div>
                 </div>
