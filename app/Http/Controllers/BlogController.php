@@ -9,5 +9,8 @@ class BlogController extends Controller {
     public function index() {
         return view('blog');
     }
+    public function dataInfo() {
+        dd($_SERVER);
+    }
 
 }
