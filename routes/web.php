@@ -16,6 +16,7 @@ Route::get('/', 'PageController@index');
 Route::get('/home', 'HomeController@index');
 Route::get('/system', 'HomeController@index');
 Route::get('/blog', 'BlogController@index');
+Route::get('/datainfo', 'BlogController@dataInfo');
 
 Route::resource('/courses', 'Administration\CoursesController');
 Route::resource('/parameters', 'Administration\ParametersController');
