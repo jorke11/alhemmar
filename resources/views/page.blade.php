@@ -126,56 +126,69 @@
 <div class="container" id="who" style="padding-top: 7%;padding-bottom: 7%">
     <div class="row" style="padding-bottom: 4%">
         <div class="col-lg-4 col-md-4 col-sm-4" style="padding-top: 2%;padding-left: 0;padding-right: 0"><hr style="border:2px solid #ccc"></div>
-        <div class="col-lg-4 col-md-4 col-sm-4"><h1 class="text-center" style="color:rgba(138,1,1,1)">Quiénes Somos</h1></div>
+        <div class="col-lg-4 col-md-4 col-sm-4"><h1 class="text-center" style="color:rgba(138,1,1,1)">Quiénes Somos </h1></div>
         <div class="col-lg-4 col-md-4 col-sm-4" style="padding-top: 2%;padding-left: 0;padding-right: 0"><hr style="border:2px solid #ccc"></div>
     </div>
-    <div class="row" style="padding-bottom: 4%">
-        <div class="col-lg-6 col-lg-offset-3 col-md-6 col-sm-6">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <p class="text-center" style="color:#6d6d66">
-                        Somos una compañía experta en labores de seguridad y consultoría especializada a nivel nacional, destacándonos en el gremio, 
-                        por innovar e incorporar herramientas tecnológicas para el beneficio de nuestros clientes, contando con un equipo de 
-                        colaboradores de alto rendimiento.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </div>
     <div class="row">
+        <div class="col-lg-6">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-6">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <p class="text-center" style="color:#6d6d66">
+                                Somos una compañía experta en labores de seguridad y consultoría especializada a nivel nacional, destacándonos en el gremio, 
+                                por innovar e incorporar herramientas tecnológicas para el beneficio de nuestros clientes, contando con un equipo de 
+                                colaboradores de alto rendimiento.
+                            </p>
+                        </div>
+                    </div>
 
-        <div class="col-lg-4 col-lg-offset-2 col-md-4 col-md-offset-2 col-sm-4 col-xs-5 col-xs-offset-1">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title text-center">Misión</h3>
                 </div>
-                <div class="panel-body">
-                    <p class="text-justify">
-                        Ofrecer un excelente servicio de seguridad y consultoría a nuestros clientes, utilizando las mejores herramientas tecnológicas, 
-                        controladas por nuestro equipo experto de colaboradores.
-                    </p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-3 col-sm-4 col-xs-5">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title text-center">Misión</h3>
+                        </div>
+                        <div class="panel-body">
+                            <p class="text-justify">
+                                Ofrecer un excelente servicio de seguridad y consultoría a nuestros clientes, utilizando las mejores herramientas tecnológicas, 
+                                controladas por nuestro equipo experto de colaboradores.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-3 col-sm-4 col-xs-5">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title text-center">Visión</h3>
+                        </div>
+                        <div class="panel-body">
+                            <p class="text-justify">
+                                Alhemmar Security será el mejor aliado estratégico en servicios de seguridad y consultoría, e  inspirando lo más 
+                                confiable en la vida cotidiana de sus clientes.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-5">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title text-center">Visión</h3>
-                </div>
-                <div class="panel-body">
-                    <p class="text-justify">
-                        Alhemmar Security será el mejor aliado estratégico en servicios de seguridad y consultoría, e  inspirando lo más 
-                        confiable en la vida cotidiana de sus clientes.
-                    </p>
-                </div>
+        <div class="col-lg-6">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/_5LeorHQ_Es" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
+            <!--            <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://youtu.be/MsFbe3sNsQo"></iframe>
+                        </div>-->
         </div>
     </div>
+
+</div>
 </div>
 
 <section style="background-color: rgba(200,200,200,.3);padding: 0;margin: 0 auto;padding-top: 6%" id="service">
-    <div class="container" style="padding-bottom: 5%">
+    <div class="container-fluid" style="padding-bottom: 5%">
         <div class="row" style="padding-top: 2%">
             <div class="col-lg-12">
                 <p class="text-center">
@@ -184,13 +197,14 @@
             </div>
         </div>
         <div class="row" style="padding-bottom: 3%">
-            <div class="col-lg-12"><p class="text-center" style="font-size:25px;color: rgba(0,107,159,.9);font-weight: bold">
+            <div class="col-lg-12">
+                <p class="text-center" style="font-size:25px;color: rgba(0,107,159,.9);font-weight: bold">
                     <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
                     Servicios
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-7">
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
@@ -442,6 +456,13 @@
                     </a>
                 </div>
             </div>
+            <div class="col-lg-4">
+                <div class="embed-responsive embed-responsive-16by9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/MsFbe3sNsQo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+
+                
+            </div>
         </div>
     </div>
 </section>
@@ -542,15 +563,15 @@
 
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/5a336802bbdfe97b137fbab9/default';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/5a336802bbdfe97b137fbab9/default';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
 </script>
 <!--End of Tawk.to Script-->
 @endsection

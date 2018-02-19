@@ -98,10 +98,10 @@ echo json_encode([
                         <!-- Left Side Of Navbar -->
                         <ul class="nav navbar-nav">
                             <li class="active"><a href="/" >Inicio</a></li>
-                            <li><a href="#who" >Quiénes Somos</a></li>
-                            <li><a href="#service">Servicio</a></li>
-                            <li><a href="#cobertura">Cobertura</a></li>
-                            <li><a href="/blog">Blogs y experiencias</a></li>
+                            <li><a href="{{url("/")}}#who" >Quiénes Somos</a></li>
+                            <li><a href="{{url("/")}}#service">Servicio</a></li>
+                            <li><a href="{{url("/")}}#cobertura">Cobertura</a></li>
+                            <li><a href="{{url("/blog")}}">Blogs y experiencias</a></li>
                             <li><a href="/login">Plataforma Tecnologica</a></li>
                         </ul>
 
