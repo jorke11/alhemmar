@@ -89,6 +89,7 @@
         padding-top: 14% !important;
         padding-bottom:  10% !important;
         border-radius: 15px;
+        min-height: 180px
     }
     .menu-black{
         background-color:rgba(0,0,0,1) !important;
@@ -111,12 +112,23 @@
         color:black !important;
         background-color:white !important;
     }
+
+    @media screen and (min-width: 800px) {
+        #img-main{
+            height: 600px;
+        }
+    }
+    @media screen and (max-width: 500px) {
+        #img-main{
+            height: 150px;
+        }
+    }
 </style>
 <div id="space-nav">
 
 </div>
 <div class="container-fluid">
-    <div style='background-image: url("img/fondo_2.png");background-size: 100%;background-repeat: no-repeat;width: 100%;height: 600px;padding-top: 10px;' id="img-main">
+    <div style='background-image: url("img/fondo_2.png");background-size: 100%;background-repeat: no-repeat;width: 100%;padding-top: 10px;' id="img-main">
         <div class="row">
             <div class="col-md-12 col-xs-12">
             </div>
@@ -146,7 +158,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-6 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-6 col-md-3 col-sm-4 col-xs-6">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h3 class="panel-title text-center">Misión</h3>
@@ -159,7 +171,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-3 col-sm-4 col-xs-5">
+                <div class="col-lg-6 col-md-3 col-sm-4 col-xs-6">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h3 class="panel-title text-center">Visión</h3>
@@ -178,16 +190,12 @@
             <div class="embed-responsive embed-responsive-16by9">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/_5LeorHQ_Es" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
-            <!--            <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" src="https://youtu.be/MsFbe3sNsQo"></iframe>
-                        </div>-->
         </div>
     </div>
 
 </div>
-</div>
 
-<section style="background-color: rgba(200,200,200,.3);padding: 0;margin: 0 auto;padding-top: 6%" id="service">
+<section style="background-color: rgba(200,200,200,.3);padding: 0;margin: 0 auto;padding-top: 6%" id="service" class="hidden-xs">
     <div class="container-fluid" style="padding-bottom: 5%">
         <div class="row" style="padding-top: 2%">
             <div class="col-lg-12">
@@ -458,27 +466,323 @@
             </div>
             <div class="col-lg-4">
                 <div class="embed-responsive embed-responsive-16by9">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/MsFbe3sNsQo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/MsFbe3sNsQo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 </div>
 
-                
+
             </div>
         </div>
     </div>
 </section>
 
+
+<section style="background-color: rgba(200,200,200,.3);padding: 0;margin: 0 auto;padding-top: 6%" id="service" class="hidden-md hidden-lg">
+    <div class="container-fluid" style="padding-bottom: 5%">
+        <div class="row" style="padding-top: 2%">
+            <div class="col-lg-12">
+                <p class="text-center">
+
+                </p>
+            </div>
+        </div>
+        <div class="row" style="padding-bottom: 3%">
+            <div class="col-lg-12">
+                <p class="text-center" style="font-size:25px;color: rgba(0,107,159,.9);font-weight: bold">
+                    <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                    Servicios
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-7 col-sm-12">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="row" >
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6" >
+                                    <div class="panel panel-default div-soldier" >
+                                        <div class="panel-body">
+                                            <p class="text-center text-services" >SEGURIDAD INTEGRAL 
+                                                <br>
+                                                EN RIESGOS
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6" >
+                                    <div class="panel panel-default div-soldier" >
+                                        <div class="panel-body ">
+                                            <p class="text-center text-services">EXAMENES <br>DE POLIGRAFIA</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                    <div class="panel panel-default div-soldier"  >
+                                        <div class="panel-body">
+                                            <p class="text-center text-services" >
+                                                PRUEBAS DE <br>EYE DETECT
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                    <div class="panel panel-default div-soldier"  >
+                                        <div class="panel-body">
+                                            <p class="text-center text-services">PRUEBAS DE V.S.A ANALISIS <br>DE STRES DE LA VOZ</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                    <div class="panel panel-default  div-soldier">
+                                        <div class="panel-body text-center">
+                                            <p class="text-center text-services">ESTUDIOS DE CONFIABILIDAD<br> A PERSONAS</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                    <div class="panel panel-default div-soldier">
+                                        <div class="panel-body">
+                                            <p class="text-center text-services">PRUEBAS <br>PSICOTECNICAS</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                    <div class="panel panel-default div-soldier">
+                                        <div class="panel-body">
+                                            <p class="text-center text-services">SELECCIÓN DE <br>PERSONAL ADMINISTRATIVO</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                    <div class="panel panel-default div-soldier">
+                                        <div class="panel-body">
+                                            <p class="text-center text-services">SELECCIÓN DE PERSONAL PARA SERVICIOS DE NIÑERAS</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="row" >
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                    <div class="panel panel-default div-soldier">
+                                        <div class="panel-body">
+                                            <p class="text-center text-services" >SELECCIÓN DE PERSONAL PARA SERVICIOS DOMESTICOS
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                    <div class="panel panel-default div-soldier">
+                                        <div class="panel-body ">
+                                            <p class="text-center text-services">VISITAS DOMICILIARIAS A PROVEEDORES</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                    <div class="panel panel-default div-soldier">
+                                        <div class="panel-body">
+                                            <p class="text-center text-services">
+                                                VALIDACIONES DE <br>IDENTIDAD
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                    <div class="panel panel-default div-soldier">
+                                        <div class="panel-body">
+                                            <p class="text-center text-services">VERIFICACIONES JUDICIALES</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                    <div class="panel panel-default  div-soldier">
+                                        <div class="panel-body text-center">
+                                            <p class="text-center text-services">
+                                                VERIFICACIONES ACADEMICAS
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                    <div class="panel panel-default div-soldier">
+                                        <div class="panel-body">
+                                            <p class="text-center text-services">
+                                                VERIFICACIONES <br>FINANCIERAS
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                    <div class="panel panel-default div-soldier">
+                                        <div class="panel-body">
+                                            <p class="text-center text-services">
+                                                ANALISIS Y GESTION DE RIESGOS DE DIFERENTES ENTORNOS
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                    <div class="panel panel-default div-soldier">
+                                        <div class="panel-body">
+                                            <p class="text-center text-services">
+                                                ESTUDIOS DE SEGURIDAD A INSTALACIONES
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                    <div class="panel panel-default div-soldier">
+                                        <div class="panel-body">
+                                            <p class="text-center text-services" >
+                                                AUDITORIAS A <br>CONTRATOS
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                    <div class="panel panel-default div-soldier">
+                                        <div class="panel-body ">
+                                            <p class="text-center text-services">
+                                                CAPACITACIONES EN SEGURIDAD
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                    <div class="panel panel-default div-soldier">
+                                        <div class="panel-body">
+                                            <p class="text-center text-services">
+                                                INVESTIGACIONES ADMINISTRATIVAS
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                    <div class="panel panel-default div-soldier">
+                                        <div class="panel-body">
+                                            <p class="text-center text-services">
+                                                EVALUACION DE SINIESTROS
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                    <div class="panel panel-default  div-soldier">
+                                        <div class="panel-body text-center">
+                                            <p class="text-center text-services">
+                                                ASESORIA JURIDICA LABORAL Y PENAL
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                    <div class="panel panel-default div-soldier">
+                                        <div class="panel-body">
+                                            <p class="text-center text-services">
+                                                SEGURIDAD INFORMATICA
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                    <div class="panel panel-default div-soldier">
+                                        <div class="panel-body">
+                                            <p class="text-center text-services">
+                                                SISTEMAS TECNOLOGICOS EN SEGURIDAD
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/MsFbe3sNsQo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
 <section id="cobertura">
     <div class="container" style="padding-bottom: 5%">
         <div class="row" style="padding-top:8%;padding-bottom: 1%">
-            <div class="col-lg-6 col-lg-offset-3 col-md-6 col-sm-6 col-xs-6"><h1 class="text-center">Cobertura</h1></div>
+            <div class="col-lg-6 col-lg-offset-3 col-md-6 col-sm-6 col-xs-12"><h1 class="text-center">Cobertura</h1></div>
         </div>
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding-top: 5%">
                 <p class="text-justify">Tenemos cobertura a nivel nacional en el territorio colombiano y municipios principales generando un valor agregado para dar respuesta oportuna a las necesidades generadas por nuestros clientes.<br>
                     Contamos con alianzas estratégicas internacionales en México, Panamá y EEUU, que nos permite desarrollar eficazmente el requerimiento.</p>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                <p class="text-center"> <img src="img/colombia.png"></p>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 center-block">
+                <p class="text-center"> <img src="img/colombia.png" class="img-responsive center-block"></p>
             </div>
         </div>
 
@@ -543,13 +847,13 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="row">
                             <div class="col-lg-3 col-lg-offset-3 col-md-3 col-sm-3 col-xs-4">
-                                <a href="https://es-la.facebook.com/ALSECUR/" target="_blank"><img src='img/facebook.png'></a>
+                                <a href="https://es-la.facebook.com/ALSECUR/" target="_blank"><img src='img/facebook.png' class="img-responsive"></a>
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4">
-                                <img src='img/instagram.png'>
+                                <img src='img/instagram.png' class="img-responsive">
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4">
-                                <img src='img/twitter.png'>
+                                <img src='img/twitter.png' class="img-responsive">
                             </div>
                         </div>
                     </div>

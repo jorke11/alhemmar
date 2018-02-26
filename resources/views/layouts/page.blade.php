@@ -74,7 +74,7 @@ echo json_encode([
         <!--<link href="/css/app.css" rel="stylesheet">-->
     </head>
     <!--<body style="background-color: #ef8002;">-->
-    <body>
+    <body style="width:100%">
         <div id="app" >
             <nav class="navbar navbar-default navbar-fixed-top menu-white">
                 <div class="container">
