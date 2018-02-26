@@ -86,8 +86,14 @@ class OrdersController extends Controller {
         $sql = DB::table("vorders")->get();
         return response()->json($sql);
     }
+
     public function getDepartments() {
         $sql = Department::all();
+        return response()->json($sql);
+    }
+
+    public function getCities($id) {
+        $sql = Cities::where("department_id", $id)->get();
         return response()->json($sql);
     }
 
