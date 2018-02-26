@@ -25,7 +25,7 @@ class OrdersController extends Controller {
     public $email;
 
     public function __construct() {
-        $this->middleware("auth");
+//        $this->middleware("auth");
         $this->email = array();
     }
 
