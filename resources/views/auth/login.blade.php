@@ -92,10 +92,11 @@
                                             <a href="https://es-la.facebook.com/ALSECUR/" target="_blank" ><img src='img/facebook50x50.png'></a>
                                         </div>
                                         <div class="col-lg-2">
-                                            <img src='img/instagram50x50.png'>
+                                            <a href="https://www.instagram.com/alhemmarsecurity" target="_blank"><img src='img/instagram50x50.png'  class="img-responsive"></a>
                                         </div>
                                         <div class="col-lg-2">
-                                            <img src='img/twitter50x50.png'>
+                                            <a href='https://www.twitter.com/ALHEMMARSECUR' target="_blank"><img src='img/twitter50x50.png'  class="img-responsive" ></a>
+                                       
                                         </div>
                                     </div>
                                 </div>
