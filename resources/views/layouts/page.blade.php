@@ -103,6 +103,7 @@ echo json_encode([
                             <li><a href="{{url("/")}}#cobertura">Cobertura</a></li>
                             <li><a href="{{url("/blog")}}">Blogs y experiencias</a></li>
                             <li><a href="/login">Plataforma Tecnologica</a></li>
+                            <li><a href="/contactus">Contactenos</a></li>
                         </ul>
 
                     </div>

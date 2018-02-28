@@ -18,6 +18,9 @@ Route::get('/system', 'HomeController@index');
 Route::get('/blog', 'BlogController@index');
 Route::get('/datainfo', 'BlogController@dataInfo');
 
+Route::get('/contactus', 'PageController@contactus');
+Route::post('/contactus', 'PageController@sendEmail');
+
 Route::resource('/courses', 'Administration\CoursesController');
 Route::resource('/parameters', 'Administration\ParametersController');
 Route::resource('/schedules', 'Administration\SchedulesController');
