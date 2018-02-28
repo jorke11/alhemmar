@@ -816,7 +816,7 @@
                         <p>
                             <span class="glyphicon glyphicon-road" aria-hidden="true"></span>
 
-                            Carrera 19 No 71a - 23 Oficina 9
+                            Carrera 19 No 71a - 23
                         </p>
                     </div>
                 </div>
