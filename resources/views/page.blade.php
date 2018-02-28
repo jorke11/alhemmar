@@ -850,7 +850,7 @@
                                 <a href="https://es-la.facebook.com/ALSECUR/" target="_blank"><img src='img/facebook.png' class="img-responsive"></a>
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4">
-                                <img src='img/instagram.png' class="img-responsive">
+                                <img src="https://www.instagram.com/alhemmarsecurity" class="img-responsive">
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4">
                                 <img src='img/twitter.png' class="img-responsive">
