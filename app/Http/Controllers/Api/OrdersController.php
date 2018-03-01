@@ -97,6 +97,18 @@ class OrdersController extends Controller {
         return response()->json($sql);
     }
 
+    public function getServices() {
+        $sql = "
+            select s.id,s.description,
+            replace(replace(replace((select array_agg(c.description)
+            from schedules_detail d
+            JOIN courses c ON c.id=d.course_id where schedule_id=s.id)::text,'{\"',''),'\",\"',', '),'\"}','') as services
+            from schedules s";
+        $sql = DB::select($sql);
+
+        return response()->json($sql);
+    }
+
     public function cancelOrder($id) {
 
         $row = Orders::find($id);
