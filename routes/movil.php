@@ -8,4 +8,5 @@ Route::group(['namespace' => 'Api'], function () {
     Route::get('/getCities/{id}', 'OrdersController@getCities');
     Route::get('/getServices', 'OrdersController@getServices');
     Route::get('/cancelOrders/{id}', 'OrdersController@cancelOrder')->middleware('auth:api');
+        Route::get('getUser', 'UserController@getUser');
 });
