@@ -782,7 +782,7 @@
                     Contamos con alianzas estratégicas internacionales en México, Panamá y EEUU, que nos permite desarrollar eficazmente el requerimiento.</p>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 center-block">
-                <p class="text-center"> <img src="img/colombia.png" class="img-responsive center-block"></p>
+                <p class="text-center"> <img src="img/paises.png" class="img-responsive center-block"></p>
             </div>
         </div>
 
