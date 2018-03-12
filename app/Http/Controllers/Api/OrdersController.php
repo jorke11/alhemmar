@@ -36,6 +36,9 @@ class OrdersController extends Controller {
         $input["insert_id"] = Auth::User()->id;
         $input["schema_id"] = 1;
 
+        $sched = Schedules::where("description", $input["type_service_id"])->first();
+        $input["type_service_id"] = $sched->id;
+
         try {
             DB::beginTransaction();
 
