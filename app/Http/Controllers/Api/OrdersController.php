@@ -86,7 +86,14 @@ class OrdersController extends Controller {
     }
 
     public function getOrders() {
-        $sql = DB::table("vorders")->get();
+
+        $query = DB::table("vorders");
+
+        if (Auth::user()->role_id == 4) {
+            $query->where("insert_id", Auth::user()->id);
+        }
+
+        $sql = $query->get();
         return response()->json($sql);
     }
 
