@@ -63,8 +63,12 @@ class OrdersController extends Controller {
             if ($result) {
 
                 $in = (array) DB::table("vorders")->where("id", $result->id)->get();
-//                echo $result->id;
-//                echo $in = DB::table("vorders")->where("id", $result->id)->toSql();exit;
+
+                $sche = Schedules::find($in["schema_id"]);
+                $in["schema"] = $sche->description;
+                $in["schema_detail"] = SchedulesDetail::select("schedules_detail.id", "courses.description as course")
+                                ->join("courses", "courses.id", "schedules_detail.course_id")
+                                ->where("schedule_id", $sche->id)->get();
 
                 if (count($this->email) > 0) {
 
