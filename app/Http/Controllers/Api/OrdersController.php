@@ -62,7 +62,7 @@ class OrdersController extends Controller {
 
             if ($result) {
 
-                $param = (array) DB::table("vorders")->where("id", $result->id)->first();
+                $in = (array) DB::table("vorders")->where("id", $result->id)->first();
                 $sche = Schedules::find($in["schema_id"]);
                 $in["schema"] = $sche->description;
                 $in["schema_detail"] = SchedulesDetail::select("schedules_detail.id", "courses.description as course")
