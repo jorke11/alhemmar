@@ -122,6 +122,8 @@ class OrdersController extends Controller {
                 if ($result) {
 
                     $in = (array) DB::table("vorders")->where("id", $result->id)->first();
+                    
+                    return response()->json($in);
 
                     $sche = Schedules::find($in["schema_id"]);
                     $in["schema"] = $sche->description;
