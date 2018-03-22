@@ -68,10 +68,10 @@ class OrdersController extends Controller {
 
                 if (count($this->email) > 0) {
 
-//                    Mail::send("Notifications.order", $in, function($msj) {
-//                        $msj->subject("notificacion");
-//                        $msj->to($this->email);
-//                    });
+                    Mail::send("Notifications.order", $in, function($msj) {
+                        $msj->subject("notificacion");
+                        $msj->to($this->email);
+                    });
                 }
                 DB::commit();
                 return response()->json(['success' => true, "data" => $result]);
