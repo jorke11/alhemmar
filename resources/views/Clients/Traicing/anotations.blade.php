@@ -42,7 +42,7 @@
 
             <div class="col-lg-5">
                 <div class="form-group">
-                    <label for="email">Anotacion</label>
+                    <label for="email">Anotación</label>
                     <input type="text" class="form-control input-anotations" id="anotation" name="anotation">
                 </div>
             </div>

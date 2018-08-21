@@ -16,7 +16,7 @@
                 <table class="table table-bordered table-condensed" id="tbl">
                     <thead>
                         <tr>
-                            <th>Codigo</th>
+                            <th>Código</th>
                             <th>Ciudad</th>
                             <th>Departamento</th>
                             <th>Accion</th>

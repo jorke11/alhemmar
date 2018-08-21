@@ -480,7 +480,7 @@ class TraicingController extends Controller {
             unset($input["id"]);
 
             $file = Input::file('photo');
-            
+
             if ($file != null) {
                 $image = Image::make(Input::file('photo'));
                 $path = public_path() . '/uploads/anotations/' . $input["anotation_id"] . "/";
@@ -653,7 +653,7 @@ class TraicingController extends Controller {
     }
 
     public function updateBiografic(Request $request) {
-        $in = $request->all();
+        $in = $this->setNUllValues($request->all());
 
         $row = Biografic::FindOrFail($in["id"]);
 
@@ -691,6 +691,12 @@ class TraicingController extends Controller {
         } else {
             return response()->json(['success' => false]);
         }
+    }
+
+    public function setNUllValues($array) {
+        return array_map(function($value) {
+            return $value === "" ? NULL : $value;
+        }, $array);
     }
 
     public function updateBiograficOk(Request $request, $id) {

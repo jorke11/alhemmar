@@ -54,7 +54,7 @@
         <div class="row">
             <div class="col-lg-3">
                 <div class="form-group">
-                    <label for="email">Ciudad Expedicion</label>
+                    <label for="email">Ciudad Expedición</label>
                     <select class="form-control input-domicile input-sm" id="city_expedition_id" name="city_expedition_id" required="">
                         <option value="0">Seleccione</option>
                         @foreach($cities as $val)

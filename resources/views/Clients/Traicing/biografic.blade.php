@@ -53,7 +53,7 @@
 
             <div class="col-lg-3">
                 <div class="form-group">
-                    <label for="email">Ciudad Expedicion</label>
+                    <label for="email">Ciudad Expedición</label>
                     <select class="form-control input-biografic input-sm" id="city_expedition_id" name="city_expedition_id" required="">
                         <option value="0">Seleccione</option>
                         @foreach($cities as $val)
@@ -95,19 +95,19 @@
             <div class="col-lg-3">
                 <div class="form-group">
                     <label for="email">Pasaporte</label>
-                    <input type="text" class="form-control input-biografic" id="passport" name='passport' data-type="number" required="">
+                    <input type="text" class="form-control input-biografic" id="passport" name='passport' data-type="number">
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="form-group">
                     <label for="email">Libreta Militar</label>
-                    <input type="text" class="form-control input-biografic" id="militar_card" name='militar_card' required data-type="number">
+                    <input type="text" class="form-control input-biografic" id="militar_card" name='militar_card' data-type="number">
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="form-group">
                     <label for="email">Clase</label>
-                    <select class="form-control input-biografic input-sm" id="classes_id" name="classes_id" required="">
+                    <select class="form-control input-biografic input-sm" id="classes_id" name="classes_id">
                         <option value="0">Seleccione</option>
                         @foreach($class_military as $val)
                         <option value="{{$val->code}}">{{$val->description}}</option>
@@ -119,7 +119,7 @@
             <div class="col-lg-3">
                 <div class="form-group">
                     <label for="email">Distrito</label>
-                    <input type="text" class="form-control input-biografic" id="district" name='district' required data-type="number">
+                    <input type="text" class="form-control input-biografic" id="district" name='district' data-type="number">
                 </div>
             </div>
 
@@ -129,14 +129,14 @@
 
             <div class="col-lg-3">
                 <div class="form-group">
-                    <label for="email">Ocupación o profesion</label>
+                    <label for="email">Ocupación o profesión</label>
                     <input type="text" class="form-control input-biografic" id="profession" name='profession' required>
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="form-group">
                     <label for="email">Tarjeta Profesional</label>
-                    <input type="text" class="form-control input-biografic" id="professional_card" name='professional_card' required data-type="number">
+                    <input type="text" class="form-control input-biografic" id="professional_card" name='professional_card' data-type="number">
                 </div>
             </div>
 
@@ -204,13 +204,13 @@
             </div>
             <div class="col-lg-3">
                 <div class="form-group">
-                    <label for="email">Telefono 1</label>
+                    <label for="email">Teléfono 1</label>
                     <input type="text" class="form-control input-biografic" id="phone" name='phone'>
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="form-group">
-                    <label for="email">Telefono 2</label>
+                    <label for="email">Teléfono 2</label>
                     <input type="text" class="form-control input-biografic" id="phone2" name='phone2'>
                 </div>
             </div>

@@ -18,7 +18,7 @@
         <table class="table table-bordered" id="tblUpload">
             <thead>
                 <tr>
-                    <th>Codigo</th>
+                    <th>Código</th>
                     <th>Descripción</th>
                 </tr>
             </thead>
